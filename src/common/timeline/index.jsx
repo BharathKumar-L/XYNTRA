@@ -1,175 +1,68 @@
-import React, { useEffect } from 'react';
-import $ from 'jquery'; // Import jQuery
+import { React, useEffect,useState, useRef } from 'react';
+
 import './Timeline.css'; // Import the CSS for styling
+import { fireConfetti } from './fireConfetti';
 
-const Timeline = () => {
-    useEffect(() => {
-        const $timelineBlock = $('.cd-timeline-block');
+const Timeline = ({ setObserver, callback }) => {
+        const [message1, setMessage1] = useState("");
+        const [message2, setMessage2] = useState("");
+        const [message3, setMessage3] = useState("");
 
-        // Hide timeline blocks that are outside the viewport on initial load
-        $timelineBlock.each(function () {
-            if ($(this).offset().top > $(window).scrollTop() + $(window).height() * 0.75) {
-                $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
-            }
-        });
+        const timeline1 = useRef(null);
+        const timeline2 = useRef(null);
+        const timeline3 = useRef(null);
+        const circle1 = useRef(null);
+        const circle2 = useRef(null);
+        const circle3 = useRef(null);
 
-        // On scrolling, show/animate timeline blocks when they enter the viewport
-        const handleScroll = () => {
-            $timelineBlock.each(function () {
-                if (
-                    $(this).offset().top <= $(window).scrollTop() + $(window).height() * 0.75 &&
-                    $(this).find('.cd-timeline-img').hasClass('is-hidden')
-                ) {
-                    $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-                }
-            });
+        const someCallback = () => {
+            setMessage1("Step one");
+            callback();
         };
 
-        $(window).on('scroll', handleScroll);
-
-        // Trigger scroll to make sure blocks animate on initial load
-        handleScroll();
-
-        // Cleanup the scroll event listener on component unmount
-        return () => {
-            $(window).off('scroll', handleScroll);
+        const someCallback2 = () => {
+            setMessage2("Step two");
         };
-    }, []);
 
-    return (
-        <div>
+        const someCallback3 = () => {
+            setMessage3("Finish");
+            fireConfetti();
+        };
 
-            <section id="cd-timeline" className="cd-container">
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-picture">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
-                            alt="Picture"
-                        />
+        useEffect(() => {
+            setObserver(timeline1.current);
+            setObserver(timeline2.current);
+            setObserver(timeline3.current);
+            setObserver(circle1.current, someCallback);
+            setObserver(circle2.current, someCallback2);
+            setObserver(circle3.current, someCallback3);
+        }, []);
+
+        return (
+            <div className="wrapper">
+                <div id="timeline1" ref={timeline1} className="timeline" />
+                <div className="circleWrapper">
+                    <div id="circle1" ref={circle1} className="circle">
+                        1
                     </div>
-
-                    <div className="cd-timeline-content">
-                        <h2>Title of section 1</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
-                            dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa
-                            ad debitis unde? Iste voluptatibus minus veritatis qui ut.
-                        </p>
-                        <a href="#0" className="cd-read-more">
-                            Read more
-                        </a>
-                        <span className="cd-date">Jan 14</span>
-                    </div>
+                    <div className="message">{message1}</div>
                 </div>
-
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-movie">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg"
-                            alt="Movie"
-                        />
+                <div id="timeline2" ref={timeline2} className="timeline" />
+                <div className="circleWrapper">
+                    <div id="circle2" ref={circle2} className="circle">
+                        2
                     </div>
-
-                    <div className="cd-timeline-content">
-                        <h2>Title of section 2</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
-                            dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa
-                            ad debitis unde?
-                        </p>
-                        <a href="#0" className="cd-read-more">
-                            Read more
-                        </a>
-                        <span className="cd-date">Jan 18</span>
-                    </div>
+                    <div className="message">{message2}</div>
                 </div>
-
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-picture">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
-                            alt="Picture"
-                        />
+                <div id="timeline3" ref={timeline3} className="timeline" />
+                <div className="circleWrapper">
+                    <div id="circle3" ref={circle3} className="circle">
+                        3
                     </div>
-
-                    <div className="cd-timeline-content">
-                        <h2>Title of section 3</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, obcaecati,
-                            quisquam id molestias eaque asperiores voluptatibus cupiditate error assumenda
-                            delectus odit similique earum voluptatem doloremque dolorem ipsam quae rerum
-                            quis. Odit, itaque, deserunt corporis vero ipsum nisi eius odio natus ullam
-                            provident pariatur temporibus quia eos repellat consequuntur perferendis enim
-                            amet quae quasi repudiandae sed quod veniam dolore possimus rem voluptatum
-                            eveniet eligendi quis fugiat aliquam sunt similique aut adipisci.
-                        </p>
-                        <a href="#0" className="cd-read-more">
-                            Read more
-                        </a>
-                        <span className="cd-date">Jan 24</span>
-                    </div>
+                    <div className="message">{message3}</div>
                 </div>
+            </div>
+        );
+    };
 
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-location">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg"
-                            alt="Location"
-                        />
-                    </div>
-
-                    <div className="cd-timeline-content">
-                        <h2>Title of section 4</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
-                            dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa
-                            ad debitis unde? Iste voluptatibus minus veritatis qui ut.
-                        </p>
-                        <a href="#0" className="cd-read-more">
-                            Read more
-                        </a>
-                        <span className="cd-date">Feb 14</span>
-                    </div>
-                </div>
-
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-location">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-location.svg"
-                            alt="Location"
-                        />
-                    </div>
-
-                    <div className="cd-timeline-content">
-                        <h2>Title of section 5</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
-                            dolorum provident rerum.
-                        </p>
-                        <a href="#0" className="cd-read-more">
-                            Read more
-                        </a>
-                        <span className="cd-date">Feb 18</span>
-                    </div>
-                </div>
-
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-movie">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-movie.svg"
-                            alt="Movie"
-                        />
-                    </div>
-
-                    <div className="cd-timeline-content">
-                        <h2>Final Section</h2>
-                        <p>This is the content of the last section</p>
-                        <span className="cd-date">Feb 26</span>
-                    </div>
-                </div>
-            </section>
-        </div>
-    );
-};
-
-export default Timeline;
+    export default Timeline;

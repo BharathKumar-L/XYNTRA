@@ -1,14 +1,28 @@
 import React, { useState } from 'react';
-import FAQ from '../../common/faq';
+import TimelineObserver from "react-timeline-animation";
 import Timeline from '../../common/timeline';
 
 function Home() {
-    // Reset Password Component
+    const [message, setMessage] = useState("");
+
+    const onCallback = () => {
+      console.log("awesome");
+    };
 
     return (
         <div className="flex justify-start">
             <p>hello</p>
-            <Timeline />
+            <TimelineObserver
+                initialColor="#e5e5e5"
+                fillColor="black"
+                handleObserve={(setObserver) => (
+                    <Timeline
+                        callback={onCallback}
+                        className="timeline"
+                        setObserver={setObserver}
+                    />
+                )}
+            />
         </div>
     );
 }
