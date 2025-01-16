@@ -1,49 +1,54 @@
-import { React, useEffect,useState, useRef } from 'react';
-
+import React, { useEffect } from 'react';
+import $ from 'jquery'; // Import jQuery
 import './Timeline.css';
-import { fireConfetti } from './fireConfetti';
 
 const Timeline = ({ setObserver, callback }) => {
-        const [message1, setMessage1] = useState("");
-        const [message2, setMessage2] = useState("");
-        const [message3, setMessage3] = useState("");
+    const [message1, setMessage1] = useState("");
+    const [message2, setMessage2] = useState("");
+    const [message3, setMessage3] = useState("");
 
-        const timeline1 = useRef(null);
-        const timeline2 = useRef(null);
-        const timeline3 = useRef(null);
-        const circle1 = useRef(null);
-        const circle2 = useRef(null);
-        const circle3 = useRef(null);
+    const timeline1 = useRef(null);
+    const timeline2 = useRef(null);
+    const timeline3 = useRef(null);
+    const circle1 = useRef(null);
+    const circle2 = useRef(null);
+    const circle3 = useRef(null);
 
-        const someCallback = () => {
-            setMessage1("Step one");
-            callback();
-        };
+    const someCallback = () => {
+        setMessage1("Step one");
+        callback();
+    };
 
-        const someCallback2 = () => {
-            setMessage2("Step two");
-        };
+    $(window).on('scroll', handleScroll);
 
-        const someCallback3 = () => {
-            setMessage3("Finish");
-            fireConfetti();
-        };
+    handleScroll();
 
-        useEffect(() => {
-            setObserver(timeline1.current);
-            setObserver(timeline2.current);
-            setObserver(timeline3.current);
-            setObserver(circle1.current, someCallback);
-            setObserver(circle2.current, someCallback2);
-            setObserver(circle3.current, someCallback3);
-        }, []);
+    return () => {
+        $(window).off('scroll', handleScroll);
+    };
 
-        return (
-            <div className="wrapper">
-                <div id="timeline1" ref={timeline1} className="timeline" />
-                <div className="circleWrapper">
-                    <div id="circle1" ref={circle1} className="circle">
-                        1
+    return (
+        <div>
+            <section id="cd-timeline" className="cd-container">
+                <div className="cd-timeline-block">
+                    <div className="cd-timeline-img cd-picture">
+                        <img
+                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
+                            alt="Picture"
+                        />
+                    </div>
+
+                    <div className="cd-timeline-content">
+                        <h2>Title of section 1</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
+                            dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa
+                            ad debitis unde? Iste voluptatibus minus veritatis qui ut.
+                        </p>
+                        <a href="#0" className="cd-read-more">
+                            Read more
+                        </a>
+                        <span className="cd-date">Jan 14</span>
                     </div>
                     <div className="message">{message1}</div>
                 </div>
@@ -61,8 +66,9 @@ const Timeline = ({ setObserver, callback }) => {
                     </div>
                     <div className="message">{message3}</div>
                 </div>
-            </div>
-        );
-    };
+            </section>
+        </div>
+    );
+};
 
-    export default Timeline;
+export default Timeline;

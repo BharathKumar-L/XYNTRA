@@ -1,55 +1,134 @@
 import React from "react";
+import "./Team.css";
 
 const Team = () => {
   return (
-    <div className="container-fluid">
-      <h1 className="text-primary text-center p-3">OFFICE BEARERS</h1>
-      <div className="row m-5 p-3">
-        <div className="col-md-3 d-flex flex-column text-center">
+    <div className="team-page">
+      <h1 className="my-4">OFFICE BEARERS</h1>
+      <div className="team">
+        <div className="card1">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
-            alt=""
-            width={200}
-            className="mx-auto"
+            alt="BHUVAANESH R"
           />
-          <h4 className="mt-3">CHAIRMAN</h4>
-          <p className="text-primary fw-bold">BHUVAANESH R</p>
+          <div>
+            <h2>Bhuvaanesh R</h2>
+            <h3>CHAIRMAN</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
         </div>
-        <div className="col-md-3 d-flex flex-column text-center">
+        <div className="card1">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
-            alt=""
-            width={200}
-            className="mx-auto"
+            alt="JODERICK SHERWIN"
           />
-          <h4 className="mt-3">VICE CHAIRMAN</h4>
-          <p className="text-primary fw-bold">JODERICK SHERWIN</p>
+          <div>
+            <h2>Joderick Sherwin</h2>
+            <h3>VICE CHAIRMAN</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
         </div>
-        <div className="col-md-3 d-flex flex-column  text-center">
+        <div className="card1">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
-            alt=""
-            width={200}
-            className="mx-auto"
+            alt="DEEPIGA DHARSHINI C"
           />
-          <h4 className="mt-3">
-            SECRETARY & <br /> TREASURER
-          </h4>
-          <p className="text-primary fw-bold">DEEPIGA DHARSHINI C</p>
+          <div>
+            <h2>Deepiga Dharshini C</h2>
+            <h3>SECRETARY & TREASURER</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
         </div>
-        <div className="col-md-3 d-flex flex-column text-center">
-          <img 
+        <div className="card1">
+          <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
-            alt=""
-            width={200}
-            className="mx-auto"
+            alt="BHARATH KUMAR L"
           />
-          <h4 className="mt-3">WEBMASTER</h4>
-          <p className="fw-bold text-primary">BHARATH KUMAR L</p>
+          <div>
+            <h2>Bharath Kumar L</h2>
+            <h3>WEBMASTER</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
         </div>
       </div>
-      <div className="row">
-        
+      <h1 className="my-4">DOMAIN LEADS</h1>
+      <div className="team dl">
+        <div className="card1">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            alt="ROSHINI D"
+          />
+          <div>
+            <h2>Roshini D</h2>
+            <h3>WEB DEVELOPMENT</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
+        </div>
+        <div className="card1">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            alt="Joderick Sherwin"
+          />
+          <div>
+            <h2>Joderick Sherwin</h2>
+            <h3>MACHINE LEARNING</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
+        </div>
+        <div className="card1">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            alt="Amrutha B J"
+          />
+          <div>
+            <h2>Amrutha B J</h2>
+            <h3>APP DEVELOPMENT</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
+        </div>
+        <div className="card1">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            alt="Caroline Suja J S"
+          />
+          <div>
+            <h2>Caroline Suja J S</h2>
+            <h3>MEDIA MANAGEMENT</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
+        </div>
+        <div className="card1">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            alt="Caroline Suja J S"
+          />
+          <div>
+            <h2>Ragul Sowmiyanarayanan G K</h2>
+            <h3>EVENT MANAGEMENT</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
+        </div>
+        <div className="card1">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            alt="Caroline Suja J S"
+          />
+          <div>
+            <h2>Nandha Kumar P</h2>
+            <h3>DESIGN TEAM</h3>
+            <p></p>
+            <a href="#">Follow Account</a>
+          </div>
+        </div>
       </div>
     </div>
   );

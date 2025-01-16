@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./reg_timer.css"
 
 const Regtimer = () => {
   const targetDate = new Date("Jan 31, 2025 00:00:00").getTime();

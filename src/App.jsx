@@ -8,13 +8,13 @@ import Live from "./common/live/Live";
 import Team from "./common/team/Team";
 import Regtimer from "./common/reg_timer/reg_timer";
 import ParticleBackground from "./common/bg/ParticleBackground";
-import "./App.css"
+import "./App.css";
 import Contact from "./common/contact/Contact";
 
 function App() {
   return (
     <Router>
-      <ParticleBackground  id="particle-canvas" />
+      <ParticleBackground id="particle-canvas" />
       <Navbar />
       <div className="mt-5 p-4">
         <Routes>
