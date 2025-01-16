@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import $ from 'jquery'; // Import jQuery
-import './Timeline.css'; // Import the CSS for styling
+import './Timeline.css';
 
 const Timeline = () => {
     useEffect(() => {
@@ -27,7 +27,6 @@ const Timeline = () => {
 
         $(window).on('scroll', handleScroll);
 
-        // Trigger scroll to make sure blocks animate on initial load
         handleScroll();
 
         // Cleanup the scroll event listener on component unmount
@@ -38,7 +37,6 @@ const Timeline = () => {
 
     return (
         <div>
-
             <section id="cd-timeline" className="cd-container">
                 <div className="cd-timeline-block">
                     <div className="cd-timeline-img cd-picture">
