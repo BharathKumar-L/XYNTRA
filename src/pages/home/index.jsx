@@ -14,7 +14,19 @@ function Home() {
 
     return (
         <div className="flex justify-start">
-            
+            <p>hello</p>
+            <Hero/>
+            <TimelineObserver
+                initialColor="#e5e5e5"
+                fillColor="black"
+                handleObserve={(setObserver) => (
+                    <Timeline
+                        callback={onCallback}
+                        className="timeline"
+                        setObserver={setObserver}
+                    />
+                )}
+            />
         </div>
     );
 }
