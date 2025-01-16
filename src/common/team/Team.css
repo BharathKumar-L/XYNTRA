@@ -17,7 +17,7 @@
     max-width: 400px;
     margin-left: 40px;
     padding: 50px 30px 50px 20px;
-    background: rgba(0, 255, 153, 0.7);
+    background: rgba(76, 255, 136, 0.8);
     border-radius: 24px;
 }
 .card1 img {
@@ -28,18 +28,11 @@
     margin-right: 30px;
     border-radius: inherit;
     box-shadow: 
-        0 60px 40px
-        rgb(0 0 0 / 8%);
+    0 60px 40px
+    rgb(0 0 0 / 8%);
 }
 .card1 h2 {
     font-size: 28px;
-    font-weight: 400;
-    margin-top: 0;
-    margin-right: 30px;
-    margin-bottom: 10px;
-}
-.dl .card1 h2 {
-    font-size: 24px;
     font-weight: 400;
     margin-top: 0;
     margin-right: 30px;
@@ -54,12 +47,12 @@
 .card1 p{
     font-size: 14px;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     opacity: 0.5;
 }
 .card1 a{
     border: solid 2px #000000;
-    color: #08636f;
+    color: #000000;
     padding: 10px 18px;
     font-size: 16px;
     border-radius: 40px;
@@ -67,6 +60,21 @@
     max-width: fit-content;
 }
 
+.dl > .card1{
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    padding: 50px 30px 50px 20px;
+    background: rgba(10, 166, 190, 0.8);
+    border-radius: 24px;
+}
+.dl > .card1 h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
 @media (width <= 600px) {
     .team{
         display: flex;

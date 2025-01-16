@@ -1,0 +1,80 @@
+.contact-team{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins";
+    margin-top: 40px;
+}
+.contact-card{
+    display: flex;
+    align-items: center;
+    max-width: 400px;
+    margin-left: 40px;
+    padding: 35px 10px 35px 20px;
+    background: rgba(76, 255, 136, 0.8);
+    border-radius: 24px;
+}
+.contact-card img {
+    max-width: 200px;
+    width: 35vw;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 
+    0 60px 40px
+    rgb(0 0 0 / 8%);
+}
+.contact-card h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+.contact-card a{
+    color: #f50000;
+    font-size: 22px;
+    border-radius: 40px;
+    text-decoration: none;
+    max-width: fit-content;
+}
+@media (width <= 600px) {
+    .contact-team{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .contact-card {
+        margin: 80px 0 0 0 ;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 60px;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-card h2{
+        text-align: center;
+        margin-right: 0;
+    }   
+    .contact-card img{
+        width: 100%;
+        margin: -100px 0 30px 0;
+        max-width: 400px;
+    }
+}
+@media ( width <= 600px) {
+    .contact-card img{
+        height:40vw;
+        width: 40vw;
+        border-radius: 50%;
+        margin-top: -140px;
+        text-align: center;
+    }
+}
