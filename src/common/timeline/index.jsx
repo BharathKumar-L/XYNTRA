@@ -1,7 +1,6 @@
 import { React, useEffect,useState, useRef } from 'react';
 
 import './Timeline.css';
-import { fireConfetti } from './fireConfetti';
 
 const Timeline = ({ setObserver, callback }) => {
         const [message1, setMessage1] = useState("");
