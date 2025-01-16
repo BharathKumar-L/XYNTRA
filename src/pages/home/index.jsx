@@ -4,29 +4,15 @@ import Timeline from '../../common/timeline';
 import Navbar from '../../common/navbar/navbar';
 import Hero from '../../common/hero/hero';
 import Footer from '../../common/footer/footer';
+import Regtimer from '../../common/reg_timer/reg_timer';
 
 function Home() {
-    const [message, setMessage] = useState("");
-
-    const onCallback = () => {
-      console.log("awesome");
-    };
 
     return (
         <div className="flex justify-start">
             <p>hello</p>
             <Hero/>
-            <TimelineObserver
-                initialColor="#e5e5e5"
-                fillColor="black"
-                handleObserve={(setObserver) => (
-                    <Timeline
-                        callback={onCallback}
-                        className="timeline"
-                        setObserver={setObserver}
-                    />
-                )}
-            />
+            <Regtimer />
         </div>
     );
 }

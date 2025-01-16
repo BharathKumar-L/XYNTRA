@@ -1,6 +1,7 @@
 import React from "react";
 import "./Team.css";
 import webmaster from "../../assets/webmaster.png";
+import aathithya from "../../assets/aathithya_event_management.jpg";
 
 
 const Team = () => {
@@ -29,7 +30,7 @@ const Team = () => {
             <h2>Joderick Sherwin</h2>
             <h3>VICE CHAIRMAN</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/joderick-sherwin-j/">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -80,7 +81,7 @@ const Team = () => {
             <h2>Joderick Sherwin</h2>
             <h3>MACHINE LEARNING</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/joderick-sherwin-j/">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -215,7 +216,7 @@ const Team = () => {
             <h2>Bharath D</h2>
             <h3>EVENT MANAGEMENT</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/bharath-d-2a60ab2a6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -256,14 +257,14 @@ const Team = () => {
         </div>
         <div className="card1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={aathithya}
             alt="Aathithya S K"
           />
           <div>
             <h2>Aathithya S K</h2>
             <h3>EVENT MANAGEMENT</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/athithya-s-k/">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -299,7 +300,7 @@ const Team = () => {
             <h2>Divya K</h2>
             <h3>EVENT MANAGEMENT</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/divya-k-3aa1862a2/">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -359,7 +360,7 @@ const Team = () => {
             <h2>Jayadharsini M</h2>
             <h3>EVENT MANAGEMENT - PR TEAM</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/jayadharsini-mathiyalagan-72607b2a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -371,7 +372,7 @@ const Team = () => {
             <h2>Gokula Sarathy PS</h2>
             <h3>DESIGN TEAM</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/gokula-sarathy-p-s-8343121b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">Follow Account</a>
           </div>
         </div>
         <div className="card1">

@@ -6,7 +6,7 @@ import Timeline from "./common/timeline";
 import FAQ from "./common/faq";
 import Live from "./common/live/Live";
 import Team from "./common/team/Team";
-import Registration from "./common/Registration";
+import Registration from "./common/Registration/index";
 import Regtimer from "./common/reg_timer/reg_timer";
 import ParticleBackground from "./common/bg/ParticleBackground";
 import "./App.css";
@@ -27,7 +27,7 @@ function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/deadline" element={<Regtimer />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/Registration" element={<Registration/>}/>
+          <Route path="/register" element={<Registration/>}/>
         </Routes>
       </div>
     </Router>
