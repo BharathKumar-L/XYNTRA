@@ -47,8 +47,8 @@
           "enable": true,
           "mode": "repulse",
           "parallax": {
-            "enable": false,
-            "force": 8,
+            "enable": true,
+            "force": 10,
             "smooth": 20
           }
         },

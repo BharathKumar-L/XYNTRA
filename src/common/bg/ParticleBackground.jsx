@@ -1,14 +1,14 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { useEffect, useState } from "react";
-import { loadFull } from "tsparticles"; // Import the full version of tsParticles
-import particlesConfig from "./particlesConfig.json"; // Ensure the JSON file path is correct
+import { loadFull } from "tsparticles"; 
+import particlesConfig from "./particlesConfig.json"; 
 
 const ParticlesComponent = (props) => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadFull(engine); // Load the full version of tsParticles
+      await loadFull(engine); 
     }).then(() => {
       setInit(true);
     });

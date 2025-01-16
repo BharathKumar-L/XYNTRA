@@ -1,5 +1,6 @@
+import logo from "../../assets/logo.png";
 import React, { useState, useEffect } from "react";
-import "./reg_timer.css"
+import "./reg_timer.css";
 
 const Regtimer = () => {
   const targetDate = new Date("Jan 31, 2025 00:00:00").getTime();
@@ -30,26 +31,16 @@ const Regtimer = () => {
   }, []);
 
   return (
-    <div className="countdown-container" style={styles.container}>
-      <h2 style={styles.heading}>Welcome to the FASTLANE</h2>
+    <div className=" countdown-container">
+      <div className="countdown-content">
+        <img src={logo} alt="logo" />
+      </div>
       {!timeLeft.expired ? (
-        <div className="countdown" style={styles.countdown}>
-          <div className="time" style={styles.time}>
-            <span style={styles.value}>{timeLeft.days}</span>
-            <p style={styles.label}>Days</p>
-          </div>
-          <div className="time" style={styles.time}>
-            <span style={styles.value}>{timeLeft.hours}</span>
-            <p style={styles.label}>Hours</p>
-          </div>
-          <div className="time" style={styles.time}>
-            <span style={styles.value}>{timeLeft.minutes}</span>
-            <p style={styles.label}>Minutes</p>
-          </div>
-          <div className="time" style={styles.time}>
-            <span style={styles.value}>{timeLeft.seconds}</span>
-            <p style={styles.label}>Seconds</p>
-          </div>
+        <div className="circle-container">
+          <Circle value={timeLeft.days} max={365} label="Days" />
+          <Circle value={timeLeft.hours} max={24} label="Hours" />
+          <Circle value={timeLeft.minutes} max={60} label="Minutes" />
+          <Circle value={timeLeft.seconds} max={60} label="Seconds" />
         </div>
       ) : (
         <p style={styles.expired}>REGISTRATIONS CLOSED</p>
@@ -58,14 +49,24 @@ const Regtimer = () => {
   );
 };
 
+const Circle = ({ value, max, label }) => {
+  const fill = (value / max) * 100;
+
+  return (
+    <div
+      className="circle"
+      style={{
+        "--fill": `${fill}%`,
+      }}
+    >
+      <span>{value}</span>
+      <p>{label}</p>
+    </div>
+  );
+};
+
 const styles = {
-  container: { textAlign: "center", fontFamily: "Arial, sans-serif", marginTop: "20px" },
-  heading: { fontSize: "2rem", marginBottom: "20px" },
-  countdown: { display: "flex", justifyContent: "center", gap: "20px" },
-  time: { textAlign: "center" },
-  value: { fontSize: "3rem", fontWeight: "bold" },
-  label: { marginTop: "5px", fontSize: "1rem" },
-  expired: { fontSize: "1.5rem", color: "red" },
+  expired: { fontSize: "5rem", color: "white" },
 };
 
 export default Regtimer;

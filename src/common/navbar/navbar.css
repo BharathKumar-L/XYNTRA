@@ -1,17 +1,8 @@
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#logo {
-  margin-right: auto;
-}
 
 .navbar-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 }
 .navbar-nav .nav-item {
   margin-left: 15px;

@@ -1,29 +1,32 @@
 import React from "react";
 import "./Team.css";
 import webmaster from "../../assets/webmaster.png";
+import kamalesh from "../../assets/Kamalesh.jpg";
+import VC from "../../assets/vice.jpg";
 import aathithya from "../../assets/aathithya_event_management.jpg";
-
+import chairman from "../../assets/chairman.jpg";
+import deepthi from "../../assets/Deepthi.jpeg";
 
 const Team = () => {
   return (
     <div className="team-page">
-      <h1 className="my-4">OFFICE BEARERS</h1>
+      <h1 >OFFICE BEARERS</h1>
       <div className="team">
         <div className="card1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={chairman}
             alt="BHUVAANESH R"
           />
           <div>
             <h2>Bhuvaanesh R</h2>
             <h3>CHAIRMAN</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/bhuvaanesh-r">Follow Account</a>
           </div>
         </div>
         <div className="card1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={VC}
             alt="JODERICK SHERWIN"
           />
           <div>
@@ -42,7 +45,7 @@ const Team = () => {
             <h2>Deepiga Dharshini C</h2>
             <h3>SECRETARY & TREASURER</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/deepiga-dharshini-ts20">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -74,7 +77,7 @@ const Team = () => {
         </div>
         <div className="card1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={VC}
             alt="Joderick Sherwin"
           />
           <div>
@@ -185,14 +188,14 @@ const Team = () => {
         </div>
         <div className="card1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={deepthi}
             alt="Deepthi P"
           />
           <div>
             <h2>Deepthi P</h2>
             <h3>CONTENT WRITER</h3>
             <p></p>
-            <a target="_blank" href="#">Follow Account</a>
+            <a target="_blank" href="https://www.linkedin.com/in/deepthi-pavendan-b48853257/">Follow Account</a>
           </div>
         </div>
         <div className="card1">
@@ -269,7 +272,7 @@ const Team = () => {
         </div>
         <div className="card1">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={kamalesh}
             alt="Kamalesh S P"
           />
           <div>
