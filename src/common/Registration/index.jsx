@@ -1,11 +1,11 @@
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import './Registration.css';
 
 const Registration = () => {
     // Poem text
-    const kiplingPoem = `<p>IEEE Computer Society - BATTLEEIDOS</p>`;
+    const kiplingPoem = `<p>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span></p>;`;
 
     useEffect(() => {
         // Insert poem into all elements with the "text" class
@@ -34,194 +34,503 @@ const Registration = () => {
             window.removeEventListener("resize", adjustContentSize);
         };
     }, []);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [errorMessages, setErrorMessages] = React.useState([]);
+
     const [formData, setFormData] = useState({
         teamName: "",
-        abstractLink: "",
         domain: "",
-        member1Phone: "",
         teamLeaderName: "",
         teamLeaderPhone: "",
         teamLeaderEmail: "",
+        teamLeaderCollege: "",
+        teamLeaderIEEEMember: "No",
+        teamLeaderMembershipID: "",
+        // Member 1 details
         member1Name: "",
+        member1Phone: "",
         member1Email: "",
+        member1College: "",
+        member1Gender: "Male",
+        member1IEEEMember: "No",
+        member1MembershipID: "",
+        // Member 2 details
         member2Name: "",
-        member2Email: "",
         member2Phone: "",
+        member2Email: "",
+        member2College: "",
+        member2Gender: "Male",
+        member2IEEEMember: "No",
+        member2MembershipID: "",
+        // Member 3 details
         member3Name: "",
-        member3Email: "",
         member3Phone: "",
+        member3Email: "",
+        member3College: "",
+        member3Gender: "Male",
+        member3IEEEMember: "No",
+        member3MembershipID: "",
+        // Member 4 details
         member4Name: "",
-        member4Email: "",
         member4Phone: "",
+        member4Email: "",
+        member4College: "",
+        member4Gender: "Male",
+        member4IEEEMember: "No",
+        member4MembershipID: "",
+        // Abstract submission
+        abstractFile: null,
     });
 
+    // Handle input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prevData) => ({
-            ...prevData,
-            [name]: value,
-        }));
+        setFormData({ ...formData, [name]: value });
     };
 
+    // Handle file upload
+    const handleFileUpload = (e) => {
+        setFormData({ ...formData, abstractFile: e.target.files[0] });
+    };
+
+    // Navigation
+    const nextPage = () => setCurrentPage((prev) => prev + 1);
+    const prevPage = () => setCurrentPage((prev) => prev - 1);
+    const validateForm = () => {
+        const errors = [];
+        const requiredFields = ["teamLeaderName", "teamLeaderPhone", "teamLeaderEmail", "teamLeaderCollege", "member1Name", "member1Phone", "member1Email", "member1College", "member2Name", "member2Phone", "member2Email", "member2College"];
+
+        // Check required fields for Team Leader and minimum members
+        requiredFields.forEach((field) => {
+            if (!formData[field]) {
+                errors.push(`${field.replace(/([A-Z])/g, " $1")} is required.`);
+            }
+        });
+
+        // Check at least 1 female
+        const isFemalePresent =
+            formData.teamLeaderGender === "Female" ||
+            formData.member1Gender === "Female" ||
+            formData.member2Gender === "Female" ||
+            formData.member3Gender === "Female" ||
+            formData.member4Gender === "Female";
+
+        if (!isFemalePresent) {
+            errors.push("At least one female member is required.");
+        }
+
+        // Check file size
+        if (formData.abstractFile && formData.abstractFile.size > 5 * 1024 * 1024) {
+            errors.push("Abstract file size should not exceed 5MB.");
+        }
+
+        // Minimum members should be 3
+        if (!formData.member3Name || !formData.member3Phone || !formData.member3Email || !formData.member3College) {
+            errors.push("Minimum 3 members (including Team Leader) must have all required details.");
+        }
+
+        setErrorMessages(errors);
+        return errors.length === 0;
+    };
+
+
+    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("Registration Data:", formData);
-        // Further actions like sending data to the server can be added here.
+
+        if (validateForm()) {
+            // Proceed to submission logic
+            console.log("Form is valid. Proceed to submit.");
+        } else {
+            // Errors will be displayed on the 6th page
+            setPage(6); // Redirect to the 6th page to show errors
+        }
     };
 
+    const renderPage = () => {
+        switch (currentPage) {
+            case 1:
+                return (
+                    <>
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="teamName"
+                            placeholder="Team Name"
+                            value={formData.teamName}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="domain"
+                            placeholder="Domain Chosen"
+                            value={formData.domain}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="teamLeaderName"
+                            placeholder="Team Leader Name"
+                            value={formData.teamLeaderName}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="tel"
+                            name="teamLeaderPhone"
+                            placeholder="Team Leader Phone Number"
+                            value={formData.teamLeaderPhone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="email"
+                            name="teamLeaderEmail"
+                            placeholder="Team Leader Email"
+                            value={formData.teamLeaderEmail}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="teamLeaderCollege"
+                            placeholder="Team Leader College"
+                            value={formData.teamLeaderCollege}
+                            onChange={handleChange}
+                        />
+                        <select
+                            className="form-content"
+                            name="teamLeaderIEEEMember"
+                            value={formData.teamLeaderIEEEMember}
+                            onChange={handleChange}
+                        >
+                            <option value="No">IEEE Member? No</option>
+                            <option value="Yes">IEEE Member? Yes</option>
+                        </select>
+                        {formData.teamLeaderIEEEMember === "Yes" && (
+                            <input
+                                className="form-content"
+                                type="text"
+                                name="teamLeaderMembershipID"
+                                placeholder="IEEE Membership ID"
+                                value={formData.teamLeaderMembershipID}
+                                onChange={handleChange}
+                            />
+                        )}
+                    </>
+                );
+            case 2:
+                return (
+                    <>
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member1Name"
+                            placeholder="Member 1 Name"
+                            value={formData.member1Name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="tel"
+                            name="member1Phone"
+                            placeholder="Member 1 Phone Number"
+                            value={formData.member1Phone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="email"
+                            name="member1Email"
+                            placeholder="Member 1 Email"
+                            value={formData.member1Email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member1College"
+                            placeholder="Member 1 College"
+                            value={formData.member1College}
+                            onChange={handleChange}
+                        />
+                        <select
+                            className="form-content"
+                            name="member1IEEEMember"
+                            value={formData.member1Gender}
+                            onChange={handleChange}
+                        >
+                            <option value="Male">Gender: Male</option>
+                            <option value="Female">Gender: Female</option>
+                        </select>
+                        <select
+                            className="form-content"
+                            name="member1IEEEMember"
+                            value={formData.member1IEEEMember}
+                            onChange={handleChange}
+                        >
+                            <option value="No">IEEE Member? No</option>
+                            <option value="Yes">IEEE Member? Yes</option>
+                        </select>
+                        {formData.member1IEEEMember === "Yes" && (
+                            <input
+                                className="form-content"
+                                type="text"
+                                name="member1MembershipID"
+                                placeholder="Member 1 IEEE Membership ID"
+                                value={formData.member1MembershipID}
+                                onChange={handleChange}
+                            />
+                        )}
+                    </>
+                );
+            case 3:
+                return (
+                    <>
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member2Name"
+                            placeholder="Member 2 Name"
+                            value={formData.member2Name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="tel"
+                            name="member2Phone"
+                            placeholder="Member 2 Phone Number"
+                            value={formData.member2Phone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="email"
+                            name="member2Email"
+                            placeholder="Member 2 Email"
+                            value={formData.member2Email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member2College"
+                            placeholder="Member 2 College"
+                            value={formData.member2College}
+                            onChange={handleChange}
+                        />
+                        <select
+                            className="form-content"
+                            name="member2Gender"
+                            value={formData.member2Gender}
+                            onChange={handleChange}
+                        >
+                            <option value="Male">Gender: Male</option>
+                            <option value="Female">Gender: Female</option>
+                        </select>
+                        <select
+                            className="form-content"
+                            name="member2IEEEMember"
+                            value={formData.member2IEEEMember}
+                            onChange={handleChange}
+                        >
+                            <option value="No">IEEE Member? No</option>
+                            <option value="Yes">IEEE Member? Yes</option>
+                        </select>
+                        {formData.member2IEEEMember === "Yes" && (
+                            <input
+                                className="form-content"
+                                type="text"
+                                name="member2MembershipID"
+                                placeholder="Member 2 IEEE Membership ID"
+                                value={formData.member2MembershipID}
+                                onChange={handleChange}
+                            />
+                        )}
+                    </>
+                );
+            case 4:
+                return (
+                    <>
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member3Name"
+                            placeholder="Member 3 Name"
+                            value={formData.member3Name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="tel"
+                            name="member3Phone"
+                            placeholder="Member 3 Phone Number"
+                            value={formData.member3Phone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="email"
+                            name="member3Email"
+                            placeholder="Member 3 Email"
+                            value={formData.member3Email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member3College"
+                            placeholder="Member 3 College"
+                            value={formData.member3College}
+                            onChange={handleChange}
+                        />
+                        <select
+                            className="form-content"
+                            name="member3Gender"
+                            value={formData.member3Gender}
+                            onChange={handleChange}
+                        >
+                            <option value="Male">Gender: Male</option>
+                            <option value="Female">Gender: Female</option>
+                        </select>
+                        <select
+                            className="form-content"
+                            name="member3IEEEMember"
+                            value={formData.member3IEEEMember}
+                            onChange={handleChange}
+                        >
+                            <option value="No">IEEE Member? No</option>
+                            <option value="Yes">IEEE Member? Yes</option>
+                        </select>
+                        {formData.member3IEEEMember === "Yes" && (
+                            <input
+                                className="form-content"
+                                type="text"
+                                name="member3MembershipID"
+                                placeholder="Member 3 IEEE Membership ID"
+                                value={formData.member3MembershipID}
+                                onChange={handleChange}
+                            />
+                        )}
+                    </>
+                );
+            case 5:
+                return (
+                    <>
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member4Name"
+                            placeholder="Member 4 Name"
+                            value={formData.member4Name}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="tel"
+                            name="member4Phone"
+                            placeholder="Member 4 Phone Number"
+                            value={formData.member4Phone}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="email"
+                            name="member4Email"
+                            placeholder="Member 4 Email"
+                            value={formData.member4Email}
+                            onChange={handleChange}
+                        />
+                        <input
+                            className="form-content"
+                            type="text"
+                            name="member4College"
+                            placeholder="Member 4 College"
+                            value={formData.member4College}
+                            onChange={handleChange}
+                        />
+                        <select
+                            className="form-content"
+                            name="member4Gender"
+                            value={formData.member4Gender}
+                            onChange={handleChange}
+                        >
+                            <option value="Male">Gender: Male</option>
+                            <option value="Female">Gender: Female</option>
+                        </select>
+                        <select
+                            className="form-content"
+                            name="member4IEEEMember"
+                            value={formData.member4IEEEMember}
+                            onChange={handleChange}
+                        >
+                            <option value="No">IEEE Member? No</option>
+                            <option value="Yes">IEEE Member? Yes</option>
+                        </select>
+                        {formData.member4IEEEMember === "Yes" && (
+                            <input
+                                className="form-content"
+                                type="text"
+                                name="member4MembershipID"
+                                placeholder="Member 4 IEEE Membership ID"
+                                value={formData.member4MembershipID}
+                                onChange={handleChange}
+                            />
+                        )}
+                    </>
+                );
+
+
+
+
+            // Add cases 3–5 for other members
+            case 6:
+                return (
+                    <>
+                        {errorMessages.length > 0 && (
+                            <div className="error-messages">
+                                <h3>Please correct the following errors:</h3>
+                                <ul>
+                                    {errorMessages.map((error, index) => (
+                                        <li key={index} style={{ color: "red" }}>{error}</li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                        <input
+                            className="form-content"
+                            type="file"
+                            name="abstractFile"
+                            onChange={handleFileUpload}
+                        />
+                        <button type="submit">Submit</button>
+                    </>
+                );
+            default:
+                return null;
+        }
+    };
 
     return (
         <div className="container">
             <div id="Container-input">
-            <form className="form" onSubmit={handleSubmit}>
-                    <div id="login-lable">Registration</div>
-                    <input
-                        className="form-content first-input"
-                        type="text"
-                        name="teamName"
-                        placeholder="Team Name"
-                        value={formData.teamName}
-                        onChange={handleChange}
-                    />
-                    <textarea
-                        className="form-content"
-                        name="abstractLink"
-                        placeholder="Provide the Abstract Drive link"
-                        rows="4"
-                        value={formData.abstractLink}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="domain"
-                        placeholder="Domain Chosen"
-                        value={formData.domain}
-                        onChange={handleChange}
-                    />
-                    
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="teamLeaderName"
-                        placeholder="Team Leader Name"
-                        value={formData.teamLeaderName}
-                        onChange={handleChange}
-                    />
-                    
-                    <input
-                        className="form-content"
-                        type="email"
-                        name="teamLeaderEmail"
-                        placeholder="Team Leader Email"
-                        value={formData.teamLeaderEmail}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="teamLeaderPhone"
-                        placeholder="Team Leader Phone Number"
-                        value={formData.teamLeaderPhone}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member1Name"
-                        placeholder="Member 1 Name"
-                        value={formData.member1Name}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="email"
-                        name="member1Email"
-                        placeholder="Member 1 Email"
-                        value={formData.member1Email}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member1Phone"
-                        placeholder="Member 1 Phone Number"
-                        value={formData.member1Phone}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member2Name"
-                        placeholder="Member 2 Name"
-                        value={formData.member2Name}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="email"
-                        name="member2Email"
-                        placeholder="Member 2 Email"
-                        value={formData.member2Email}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member2Phone"
-                        placeholder="Member 2 Phone Number"
-                        value={formData.member2Phone}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member3Name"
-                        placeholder="Member 3 Name"
-                        value={formData.member3Name}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="email"
-                        name="member3Email"
-                        placeholder="Member 3 Email"
-                        value={formData.member3Email}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member3Phone"
-                        placeholder="Member 3 Phone Number"
-                        value={formData.member3Phone}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member4Name"
-                        placeholder="Member 4 Name"
-                        value={formData.member4Name}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="email"
-                        name="member4Email"
-                        placeholder="Member 4 Email"
-                        value={formData.member4Email}
-                        onChange={handleChange}
-                    />
-                    <input
-                        className="form-content"
-                        type="text"
-                        name="member4Phone"
-                        placeholder="Member 4 Phone Number"
-                        value={formData.member4Phone}
-                        onChange={handleChange}
-                    />
-                    <button type="submit">Submit Registration</button>
+                <form className="form" onSubmit={handleSubmit}>
+                    <div id="login-lable">BattleEidos</div>
+                    {renderPage()}
+                    <div className="button-container">
+                        {currentPage > 1 && (
+                            <button type="button" onClick={prevPage}>
+                                Previous
+                            </button>
+                        )}
+                        {currentPage < 6 && (
+                            <button type="button" onClick={nextPage}>
+                                Next
+                            </button>
+                        )}
+                    </div>
                 </form>
                 <div id="rays">
                     <svg
