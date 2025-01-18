@@ -110,7 +110,6 @@
   }
 }
 
-/* For mobile devices (portrait mode and below) */
 @media (max-width: 480px) {
     .team-page{
         padding: 0;

@@ -9,7 +9,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setScrolled(offset > 50); // Add `scrolled` class when scroll is > 50px
+      setScrolled(offset > 50); 
     };
 
     window.addEventListener("scroll", handleScroll);

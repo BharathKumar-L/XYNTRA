@@ -1,10 +1,10 @@
 import React, { useState, useRef } from "react";
-import "./FAQ.css"; // Import CSS for styling
+import "./FAQ.css"; 
 import data from '../../assets/data/data.json';
 
 const AccordionItem = ({ question, answer }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const contentRef = useRef(null); // Reference to the content div
+    const contentRef = useRef(null); 
     const toggleAccordion = () => setIsOpen(!isOpen);
 
     return (

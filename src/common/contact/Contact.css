@@ -99,7 +99,6 @@
   }
 }
 
-/* For mobile devices (portrait mode and below) */
 @media (max-width: 480px) {
   .contact-page {
     padding: 0;
