@@ -95,3 +95,130 @@ h2.faq-title {
     align-items: center !important;
     text-align: justify;
 }
+/* Media Queries for FAQ Section */
+
+/* For tablets and smaller devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    h2.faq-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .row {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .faq-column {
+        width: 100%; /* Full width for smaller screens */
+    }
+
+    .accordion-button {
+        font-size: 16px;
+        padding: 12px 15px;
+    }
+
+    .accordion-content p {
+        font-size: 14px;
+    }
+
+    .accordion-icon {
+        font-size: 18px;
+    }
+}
+
+/* For small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 10px 5px;
+    }
+
+    h2.faq-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .row {
+        gap: 15px;
+    }
+
+    .accordion-button {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .accordion-content p {
+        font-size: 12px;
+    }
+
+    .accordion-icon {
+        font-size: 16px;
+    }
+}
+
+/* For medium desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .row {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+    }
+
+    .faq-column {
+        width: 48%; /* Two columns with spacing */
+    }
+
+    .accordion-button {
+        font-size: 18px;
+        padding: 15px 20px;
+    }
+
+    .accordion-content p {
+        font-size: 16px;
+    }
+
+    .accordion-icon {
+        font-size: 20px;
+    }
+}
+
+/* For larger screens (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+        padding: 50px 30px;
+    }
+
+    h2.faq-title {
+        font-size: 40px;
+        margin-bottom: 50px;
+    }
+
+    .faq-column {
+        width: 45%;
+    }
+
+    .accordion-button {
+        font-size: 20px;
+        padding: 18px;
+    }
+
+    .accordion-content p {
+        font-size: 18px;
+    }
+
+    .accordion-icon {
+        font-size: 22px;
+    }
+}

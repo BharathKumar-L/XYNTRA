@@ -62,13 +62,13 @@ const Team = () => {
         </div>
       </div>
       <h1 className="my-4">DOMAIN LEADS</h1>
-      <div className="team dl">
+      <div className="team" id="dl">
         <div className="card1">
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
             alt="ROSHINI D"
           />
-          <div>
+          <div >
             <h2>Roshini D</h2>
             <h3>WEB DEVELOPMENT</h3>
             <p></p>

@@ -6,17 +6,16 @@ import Hero from '../../common/hero/hero';
 import Footer from '../../common/footer/footer';
 import Regtimer from '../../common/reg_timer/reg_timer';
 import FAQ from '../../common/faq';
-import Registration from '../../common/Registration';
+import Regbutton from '../../common/button/reg-button';
+import Test from '../../common/team/test';
 
 function Home() {
-
     return (
         <div className="flex home justify-start">
             {/* <Hero/> */}
             <Regtimer />
-            <button >
-                <a href="/register">Register</a>
-            </button>
+            {/* <Test /> */}
+            <Regbutton />
             <FAQ />
         </div>
     );

@@ -2,7 +2,7 @@ import React from "react";
 import "./Contact.css";
 import webmaster from "../../assets/webmaster.png";
 import VC from "../../assets/vice.jpg";
-
+import chairman from "../../assets/chairman.jpg";
 
 const Contact = () => {
   return (
@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="contact-team">
         <div className="contact-card">
           <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
+            src={chairman}
             alt="BHUVAANESH R"
           />
           <div>

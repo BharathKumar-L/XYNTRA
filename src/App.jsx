@@ -11,6 +11,7 @@ import Regtimer from "./common/reg_timer/reg_timer";
 import ParticleBackground from "./common/bg/ParticleBackground";
 import "./App.css";
 import Contact from "./common/contact/Contact";
+import Test from "./common/team/test";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/deadline" element={<Regtimer />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Registration/>}/>
+          <Route path="/test" element={<Test/>}/>
         </Routes>
       </div>
     </Router>

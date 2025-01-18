@@ -1,0 +1,33 @@
+.register-button-container {
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .register-button {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: linear-gradient(90deg, #00ff00, #00aa00, #00ff00);
+    border: 2px solid #00ff00;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.6);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .register-button:hover {
+    background: linear-gradient(90deg, #ff0000, #aa0000, #ff0000);
+    border-color: #ff0000;
+    text-shadow: 0 0 15px #ff0000, 0 0 30px #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8), 0 0 40px rgba(255, 0, 0, 0.6);
+    transform: scale(1.1);
+  }
+  
+  .register-button:active {
+    background: linear-gradient(90deg, #ffaa00, #ff5500, #ffaa00);
+    box-shadow: 0 0 25px rgba(255, 170, 0, 0.8), 0 0 50px rgba(255, 85, 0, 0.6);
+    transform: scale(0.95);
+  }
+  
