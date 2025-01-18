@@ -5,46 +5,47 @@ import VC from "../../assets/vice.jpg";
 import chairman from "../../assets/chairman.jpg";
 
 const Contact = () => {
+  const teamMembers = [
+    {
+      id: 1,
+      name: "Bhuvaanesh R",
+      image: chairman,
+      mob_no: "tel:7339624803",
+    },
+    {
+      id: 2,
+      name: "Joderick Sherwin",
+      image: VC,
+      mob_no: "tel:7094944667",
+    },
+    {
+      id: 3,
+      name: "Deepiga Dharshini C",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      mob_no: "tel:8220439219",
+    },
+    {
+      id: 4,
+      name: "Bharath Kumar L",
+      image: webmaster,
+      mob_no: "tel:6369106579",
+    },
+  ];
   return (
-    <div>
+    <div className="contact-page">
       <div className="contact-team">
-        <div className="contact-card">
-          <img
-            src={chairman}
-            alt="BHUVAANESH R"
-          />
-          <div>
-            <h2>Bhuvaanesh R</h2>
-            <a href="tel:+917339624803"><i>📞</i> 73396 24803</a>
+        {teamMembers.map((member) => (
+          <div key={member.id} className="contact-card">
+            <img src={member.image} alt={member.name} className="profile-pic" />
+            <div className="contact-content">
+              <h2>{member.name}</h2>
+              <a href={member.mob_no} rel="noreferrer">
+                <i>📞</i>CALL
+              </a>
+            </div>
           </div>
-        </div>
-        <div className="contact-card">
-          <img
-            src={VC}
-            alt="JODERICK SHERWIN"
-          />
-          <div>
-            <h2>Joderick Sherwin</h2>
-            <a href="tel:+917094944667"><i>📞</i> 70949 44667</a>
-          </div>
-        </div>
-        <div className="contact-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png?20150327203541"
-            alt="DEEPIGA DHARSHINI C"
-          />
-          <div>
-            <h2>Deepiga Dharshini C</h2>
-            <a href="tel:+918220439219"><i>📞</i> 82204 39219</a>
-          </div>
-        </div>
-        <div className="contact-card">
-          <img src={webmaster} alt="BHARATH KUMAR L" />
-          <div>
-            <h2>Bharath Kumar L</h2>
-            <a href="tel:+916369106579"><i>📞</i> 63691 06579</a>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );

@@ -1,126 +1,174 @@
-.team-page > h1{
-    text-align: center;
-    color: rgb(30, 255, 0);
+.team-page {
+  text-align: center;
+  padding: 10px 20px;
+  margin-bottom: 30px;
 }
-.team{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: 40px;
+
+.team-page h1 {
+  font-size: 36px;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 80px;
+  justify-content: center;
+}
+
+.card2 {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(255, 255,255, 0.3);
+  overflow: hidden;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.7s ease, box-shadow 0.5s ease;
+}
+
+.card2:hover {
+  transform: translateY(-1px);
+  border: solid 2px #2c3e50;
+  box-shadow: 0 8px 20px rgba(255, 255,255, 0.3);
+}
+
+.card2 img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.card-content {
+  padding-bottom: 20px;
+}
+
+.card-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #34495e;
+  margin: 0 0 10px 0;
+}
+
+.card-content h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.card-content a {
+  display: inline-block;
+  text-decoration: none;
+  color: hsl(0, 0%, 100%);
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.card-content a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media (max-width: 768px) {
+    .team-page{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+  .team {
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    font-family: "Poppins";
-}
-.card1 {
-    display: flex;
-    align-items: center;
-    max-width: 400px;
-    margin-left: 40px;
-    padding: 50px 30px 50px 20px;
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 24px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37); 
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  }
 
-.card1:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 12px 48px rgba(91, 91, 114, 0.3);
-}
+  .card2 {
+    width: 100%;
+    max-width: 218px;
+  }
 
-.card1 img {
-    max-width: 200px;
-    width: 35vw;
-    object-fit: cover;
-    margin-left: -60px;
-    margin-right: 30px;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
-}
+  .card2 img {
+    width: 160px;
+    height: 160px;
+  }
 
-.card1 h2 {
-    font-size: 28px;
-    font-weight: 400;
-    margin-top: 0;
-    margin-right: 30px;
-    margin-bottom: 10px;
-    color: #ffffff; 
-    text-shadow: 0 0 15px rgba(245, 0, 0, 0.8); 
-}
-
-.card1 h3 {
+  .card-content h2 {
     font-size: 18px;
-    font-weight: 600;
-    margin: 0;
-    opacity: 0.75;
-    color: rgba(255, 255, 255, 0.85); 
-}
+  }
 
-.card1 p {
+  .card-content h3 {
     font-size: 14px;
-    font-weight: 400;
-    margin-bottom: 10px;
-    opacity: 0.7;
-    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .card-content a {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
 }
 
-.card1 a {
-    border: solid 2px rgba(255, 255, 255, 0.5);
-    color: #ffffff;
-    padding: 10px 18px;
-    font-size: 16px;
-    border-radius: 40px;
-    text-decoration: none;
-    background: rgba(255, 255, 255, 0.2); 
-    transition: background 0.3s ease, transform 0.3s ease;
-}
+/* For mobile devices (portrait mode and below) */
+@media (max-width: 480px) {
+    .team-page{
+        padding: 0;
+        margin-bottom: 40px;
+    }
+  .team {
+    gap: 20px;
+    justify-content: center;
+  }
 
-.card1 a:hover {
-    background: rgba(197, 181, 181, 0.4);
-    transform: scale(1.1); 
-}
+  .card2 {
+    width: 100%;
+    max-width: 195px;
+  }
 
-#dl > .card1 {
-    background: rgba(255, 255, 255, 0.07);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
+  .card2 img {
+    width: 140px;
+    height: 140px;
+  }
 
-#dlh2 > h2{
+  .card-content h2 {
     font-size: 18px;
+  }
+
+  .card-content h3 {
+    font-size: 14px;
+  }
+
+  .card-content a {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
 }
 
+@media (min-width: 1600px) {
+  .team {
+    gap: 80px;
+  }
 
-@media (width <= 600px) {
-    .card1 {
-        margin: 80px 0 0 0;
-        padding: 50px;
-        width: 100%;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
-    .card1 img {
-        width: 100%;
-        margin: -100px 0 30px 0;
-        max-width: 1000px;
-        border-radius: 16px;
-    }
-    .card1 p {
-        max-width: 360px;
-    }
-}
+  .card2 {
+    width: 300px;
+  }
 
-@media (width <= 600px) {
-    .card1 img {
-        height: 45vw;
-        width: 45vw;
-        border-radius: 50%;
-        margin-top: -140px;
-        text-align: center;
-    }
+  .card2 img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .card-content h2 {
+    font-size: 22px;
+  }
+
+  .card-content h3 {
+    font-size: 18px;
+  }
+
+  .card-content a {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
 }

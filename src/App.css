@@ -1,9 +1,24 @@
-#particle-canvas{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -5;
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
 }
-.home{
-    margin-top: 80px;
+.home {
+  margin-top: 80px;
+}
+body,img,a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;    
+}
+#root {
+  margin: 0;
+  padding: 0;
+  left: 0;
+  box-sizing: border-box;
 }

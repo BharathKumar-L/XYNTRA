@@ -1,12 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
 import "./navbar.css";
 import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      setScrolled(offset > 50); // Add `scrolled` class when scroll is > 50px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
+      <nav
+        className={`navbar navbar-expand-lg navbar-dark ${
+          scrolled ? "scrolled" : ""
+        }`}
+      >
         <div className="container-fluid nav-container">
           <button
             className="navbar-toggler"
@@ -56,9 +74,6 @@ const Navbar = () => {
           </div>
         </div>
       </nav>
-      {/* <div id="logo1" className="d-flex pt-4" >
-        <img className="mx-auto mt-5 img-fluid" src={logo} alt="logo" width={450} />
-      </div> */}
     </div>
   );
 };

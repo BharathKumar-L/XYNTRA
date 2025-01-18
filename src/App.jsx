@@ -11,14 +11,13 @@ import Regtimer from "./common/reg_timer/reg_timer";
 import ParticleBackground from "./common/bg/ParticleBackground";
 import "./App.css";
 import Contact from "./common/contact/Contact";
-import Test from "./common/team/test";
 
 function App() {
   return (
     <Router>
       <ParticleBackground id="particle-canvas" />
       <Navbar />
-      <div className="mt-5 p-4">
+      <div className="pt-4">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/hero" element={<Hero />} />
@@ -29,7 +28,6 @@ function App() {
           <Route path="/deadline" element={<Regtimer />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<Registration/>}/>
-          <Route path="/test" element={<Test/>}/>
         </Routes>
       </div>
     </Router>
