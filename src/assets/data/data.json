@@ -1,0 +1,84 @@
+{
+    "home_example": "This is a data get example",
+    "leftColumnFAQs": [
+        {
+            "question": "What is the purpose of the Club?",
+            "answer": "The Tech Club aims to foster a community of technology enthusiasts, providing resources and opportunities to learn, collaborate, and innovate in various tech domains."
+        },
+        {
+            "question": "Do I need prior knowledge to join the Club?",
+            "answer": "No prior knowledge is required! We welcome members at all skill levels, from beginners to advanced tech enthusiasts."
+        },
+        {
+            "question": "What activities does the Club organize?",
+            "answer": "We organize workshops, hackathons, coding challenges, guest lectures, and collaborative projects in various areas like AI, web development, cybersecurity, and more."
+        },
+        {
+            "question": "Are there any membership fees for joining?",
+            "answer": "Membership is free! You can participate in most events without any cost. However, some special events may have minimal fees."
+        },
+        {
+            "question": "Will there be opportunities for hands-on learning?",
+            "answer": "Yes, we emphasize practical, hands-on learning experiences, from coding sessions to real-world project collaborations and hackathons."
+        },
+        {
+            "question": "Can I get guidance or mentorship in the club?",
+            "answer": "Absolutely! Our club members and mentors are always ready to help. You'll also have access to industry experts during special events and workshops."
+        }
+    ],
+    "rightColumnFAQs": [
+        {
+            "question": "What should I bring for the hackathon?",
+            "answer": "Bring your student ID, laptops, gadgets, or anything else you want to work on."
+        },
+        {
+            "question": "Will the hackathon have Wi-Fi facilities?",
+            "answer": "Yes, we will provide Wi-Fi throughout the event."
+        },
+        {
+            "question": "Can I participate without a team?",
+            "answer": "No, this hackathon is a team event. You can team up with others in our community group."
+        },
+        {
+            "question": "Will you sponsor our travel costs?",
+            "answer": "No, we do not reimburse travel costs, but accommodation is provided for those traveling from outside the city."
+        },
+        {
+            "question": "Will there be any mentoring sessions?",
+            "answer": "Yes, mentors will guide you throughout the hackathon."
+        },
+        {
+            "question": "Do I need to be a student to participate?",
+            "answer": "Yes, this hackathon is open to high school and undergraduate students."
+        }
+    ],
+    "timelineEvents": [
+        {
+            "day": 30,
+            "sup": "th",
+            "month": "Jan",
+            "year": 2014,
+            "title": "The Title 1",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "color": "#e74c3c"
+        },
+        {
+            "day": 26,
+            "sup": "th",
+            "month": "Jan",
+            "year": 2014,
+            "title": "The Title 2",
+            "description": "Aenean quis rutrum nunc, eget dictum massa.",
+            "color": "#2ecc71"
+        },
+        {
+            "day": 15,
+            "sup": "th",
+            "month": "Feb",
+            "year": 2015,
+            "title": "The Title 3",
+            "description": "Nam faucibus felis nec augue adipiscing.",
+            "color": "#3498db"
+        }
+    ]
+}
