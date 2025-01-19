@@ -6,6 +6,10 @@ import VC from "../../assets/vice.jpg";
 import aathithya from "../../assets/aathithya_event_management.jpg";
 import chairman from "../../assets/chairman.jpg";
 import deepthi from "../../assets/Deepthi.jpeg";
+import dhanasree from "../../assets/dhanasree.jpeg";
+import jayadharshini from "../../assets/Jayadharsini.jpg";
+import suranjana from "../../assets/Suranjana S.jpg";
+import bharath_d from "../../assets/bharath_d.jpg";
 import linkedin from "../../assets/linkedin.png";
 
 const teamMembers = [
@@ -50,8 +54,7 @@ const teamMembers = [
     id: 6,
     name: "Joderick Sherwin",
     role: "MACHINE LEARNING LEAD",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: VC,
     linkedIn: "https://www.linkedin.com/in/joderick-sherwin-j/",
   },
   {
@@ -106,8 +109,7 @@ const teamMembers = [
     id: 13,
     name: "Suranjana S",
     role: "MACHINE LEARNING TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: suranjana,
     linkedIn: "#",
   },
   {
@@ -129,16 +131,14 @@ const teamMembers = [
     id: 16,
     name: "Dhanasree L P",
     role: "EVENT MANAGER",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: dhanasree,
     linkedIn: "#",
   },
   {
     id: 17,
     name: "Bharath D",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: bharath_d,
     linkedIn: "#",
   },
   {
@@ -231,8 +231,7 @@ const teamMembers = [
     id: 28,
     name: "Jayadharshini M",
     role: "EVENT MANAGEMENT - PR TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: jayadharshini,
     linkedIn: "#",
   },
   {
@@ -273,8 +272,8 @@ const Team = () => {
               <h2>{member.name}</h2>
               <h3>{member.role}</h3>
               <a href={member.linkedIn} target="_blank" rel="noreferrer">
-                <i className="fa fa-linkedin" style={{ marginRight: "8px" }}></i>
                 Connect on LinkedIn 
+                 <img width={30} className="my-auto" src={linkedin} style={{display: "inline"}} />
               </a>
             </div>
           </div>

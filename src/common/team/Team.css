@@ -3,12 +3,19 @@
   padding: 10px 20px;
   margin-bottom: 30px;
 }
-
 .team-page h1 {
   font-size: 36px;
-  color: #2c3e50;
+  color: #f39c12; /* A glowing amber/orange color */
   margin-bottom: 30px;
+  text-shadow: 
+    0 0 10px #f39c12, 
+    0 0 20px #f39c12, 
+    0 0 30px #e67e22, 
+    0 0 40px #e67e22, 
+    0 0 50px #d35400, 
+    0 0 60px #d35400;
 }
+
 
 .team {
   display: flex;
@@ -30,12 +37,12 @@
 }
 
 .card2:hover {
-  transform: translateY(-1px);
+  transform: translateY(-5px);
   border: solid 2px #2c3e50;
   box-shadow: 0 8px 20px rgba(255, 255,255, 0.3);
 }
 
-.card2 img {
+.card2 .profile-pic {
   width: 220px;
   height: 220px;
   object-fit: cover;
@@ -50,14 +57,16 @@
 .card-content h2 {
   font-size: 20px;
   font-weight: 600;
-  color: #34495e;
+  color: #00ffcc; /* Soft neon cyan */
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
   margin: 0 0 10px 0;
 }
+
 
 .card-content h3 {
   font-size: 16px;
   font-weight: 400;
-  color: #7f8c8d;
+  color: #e5ebec;
   margin-bottom: 15px;
 }
 
@@ -91,7 +100,7 @@
     max-width: 218px;
   }
 
-  .card2 img {
+  .card2 .profile-pic {
     width: 160px;
     height: 160px;
   }
@@ -125,7 +134,7 @@
     max-width: 195px;
   }
 
-  .card2 img {
+  .card2 .profile-pic {
     width: 140px;
     height: 140px;
   }
@@ -153,7 +162,7 @@
     width: 300px;
   }
 
-  .card2 img {
+  .card2 .profile-pic {
     width: 240px;
     height: 240px;
   }
