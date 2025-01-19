@@ -1,6 +1,9 @@
-import React, { useEffect } from 'react';
-import $ from 'jquery'; // Import jQuery
-import './Timeline.css';
+import React, { useEffect, useRef, useState } from "react";
+
+import TimelineObserver from "react-timeline-animation";
+import { fireConfetti } from "./confetti";
+
+import "./Timeline.css";
 
 const Timeline = ({ setObserver, callback }) => {
     const [message1, setMessage1] = useState("");
@@ -19,56 +22,74 @@ const Timeline = ({ setObserver, callback }) => {
         callback();
     };
 
-    $(window).on('scroll', handleScroll);
-
-    handleScroll();
-
-    return () => {
-        $(window).off('scroll', handleScroll);
+    const someCallback2 = () => {
+        setMessage2("Step two");
     };
 
-    return (
-        <div>
-            <section id="cd-timeline" className="cd-container">
-                <div className="cd-timeline-block">
-                    <div className="cd-timeline-img cd-picture">
-                        <img
-                            src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/148866/cd-icon-picture.svg"
-                            alt="Picture"
-                        />
-                    </div>
+    const someCallback3 = () => {
+        setMessage3("Finish");
+        fireConfetti();
+    };
 
-                    <div className="cd-timeline-content">
-                        <h2>Title of section 1</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio,
-                            dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa
-                            ad debitis unde? Iste voluptatibus minus veritatis qui ut.
-                        </p>
-                        <a href="#0" className="cd-read-more">
-                            Read more
-                        </a>
-                        <span className="cd-date">Jan 14</span>
-                    </div>
-                    <div className="message">{message1}</div>
+    useEffect(() => {
+        setObserver(timeline1.current);
+        setObserver(timeline2.current);
+        setObserver(timeline3.current);
+        setObserver(circle1.current, someCallback);
+        setObserver(circle2.current, someCallback2);
+        setObserver(circle3.current, someCallback3);
+    }, []);
+
+    return (
+        <div className="wrapper">
+            <div id="timeline1" ref={timeline1} className="timeline" />
+            <div className="circleWrapper">
+                <div id="circle1" ref={circle1} className="circle">
+                    1
                 </div>
-                <div id="timeline2" ref={timeline2} className="timeline" />
-                <div className="circleWrapper">
-                    <div id="circle2" ref={circle2} className="circle">
-                        2
-                    </div>
-                    <div className="message">{message2}</div>
+                <div className="message">{message1}</div>
+            </div>
+            <div id="timeline2" ref={timeline2} className="timeline" />
+            <div className="circleWrapper">
+                <div id="circle2" ref={circle2} className="circle">
+                    2
                 </div>
-                <div id="timeline3" ref={timeline3} className="timeline" />
-                <div className="circleWrapper">
-                    <div id="circle3" ref={circle3} className="circle">
-                        3
-                    </div>
-                    <div className="message">{message3}</div>
+                <div className="message">{message2}</div>
+            </div>
+            <div id="timeline3" ref={timeline3} className="timeline" />
+            <div className="circleWrapper">
+                <div id="circle3" ref={circle3} className="circle">
+                    3
                 </div>
-            </section>
+                <div className="message">{message3}</div>
+            </div>
         </div>
     );
 };
 
-export default Timeline;
+export default function App() {
+    const [message, setMessage] = useState("");
+
+    const onCallback = () => {
+        console.log("awesome");
+    };
+
+    return (
+        <div className="App">
+            <div className="stub1">Event Timeline</div>
+            <TimelineObserver
+                initialColor="#e5e5e5"
+                fillColor="black"
+                hasReverse = "true"
+                handleObserve={(setObserver) => (
+                    <Timeline
+                        callback={onCallback}
+                        className="timeline"
+                        setObserver={setObserver}
+                    />
+                )}
+            />
+            <div className="stub2">{message}</div>
+        </div>
+    );
+}
