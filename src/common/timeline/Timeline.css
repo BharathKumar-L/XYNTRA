@@ -1,6 +1,12 @@
 .App {
-  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif; /* Galactic font style */
   text-align: center;
+  color: #ffffff; /* Primary white text */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper {
@@ -10,15 +16,25 @@
 }
 
 .timeline {
-  height: 200px;
+  height: 300px;
   width: 5px;
-  background-color: #e5e5e5;
+  background: #ffffff; /* Primary white timeline */
+  box-shadow: 0 0 10px #ffffff, 0 0 20px rgba(255, 255, 255, 0.5); /* Glowing effect */
 }
 
 .stub1 {
-  line-height: 300px;
+  line-height: 100px;
   font-size: 24px;
-  background-color: #eae4e4;
+  border-radius: 20px;
+  color: #1b1f52; /* Dark accent text for contrast */
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #ffffff; /* Primary white background */
+  box-shadow: 0px 8px 32px 0px rgba(255, 255, 255, 0.3), 0px 0px 16px rgba(173, 216, 230, 0.2) inset; /* Subtle glow */
+  backdrop-filter: blur(10px);
+}
+
+.stub2 {
+  height: 1000px;
 }
 
 .circle {
@@ -27,9 +43,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #1b1f52; /* Dark accent text */
   border-radius: 50%;
-  background-color: #e5e5e5;
+  background: #ffffff; /* Primary white orb */
+  box-shadow: 0 0 10px #ffffff, 0 0 30px rgba(255, 255, 255, 0.5); /* Glowing white */
 }
 
 .circleWrapper {
@@ -42,4 +59,19 @@
   left: 50%;
   min-width: 150px;
   font-weight: bold;
+  width: 500px;
+  margin-left: 10vh;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #ffffff; /* Primary white message box */
+  color: #1b1f52; /* Dark text for readability */
+  box-shadow: 0px 8px 32px 0px rgba(255, 255, 255, 0.5), 0px 0px 20px rgba(173, 216, 230, 0.2) inset; /* Soft glow */
+  backdrop-filter: blur(20px);
+  height: 200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(120deg, #1b1f52, #0f0c29); /* Space background */
+  color: #ffffff; /* Primary white text */
 }

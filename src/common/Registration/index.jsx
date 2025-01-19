@@ -3,7 +3,7 @@ import './Registration.css';
 
 const Registration = () => {
     // Poem text
-    const kiplingPoem = `<p>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span></p>;`;
+    const kiplingPoem = `<p>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to  <span>WIN!</span></p>;`;
 
     useEffect(() => {
         // Insert poem into all elements with the "text" class
@@ -96,7 +96,7 @@ const Registration = () => {
     const prevPage = () => setCurrentPage((prev) => prev - 1);
     const validateForm = () => {
         const errors = [];
-        const requiredFields = ["teamLeaderName", "teamLeaderPhone", "teamLeaderEmail", "teamLeaderCollege", "member1Name", "member1Phone", "member1Email", "member1College", "member2Name", "member2Phone", "member2Email", "member2College"];
+        const requiredFields = ["teamLeaderName", "teamLeaderPhone", "teamLeaderEmail", "teamLeaderCollege", "teamLeaderGender", "member1Name", "member1Phone", "member1Email", "member1College", "member2Name", "member2Phone", "member2Email", "member2College"];
 
         // Check required fields for Team Leader and minimum members
         requiredFields.forEach((field) => {
@@ -141,7 +141,7 @@ const Registration = () => {
             console.log("Form is valid. Proceed to submit.");
         } else {
             // Errors will be displayed on the 6th page
-            setPage(6); // Redirect to the 6th page to show errors
+            currentPage(6); // Redirect to the 6th page to show errors
         }
     };
 
@@ -200,6 +200,15 @@ const Registration = () => {
                         />
                         <select
                             className="form-content"
+                            name="teamLeaderGender"
+                            value={formData.teamLeaderGender}
+                            onChange={handleChange}
+                        >
+                            <option value="Male">Gender: Male</option>
+                            <option value="Female">Gender: Female</option>
+                        </select>
+                        <select
+                            className="form-content"
                             name="teamLeaderIEEEMember"
                             value={formData.teamLeaderIEEEMember}
                             onChange={handleChange}
@@ -256,7 +265,7 @@ const Registration = () => {
                         />
                         <select
                             className="form-content"
-                            name="member1IEEEMember"
+                            name="member1Gender"
                             value={formData.member1Gender}
                             onChange={handleChange}
                         >
