@@ -10,6 +10,9 @@ import "./App.css";
 import Contact from "./common/contact/Contact";
 import { useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor"
+import Footer from "./common/footer/footer";
+import CircularNavbar from "./common/nav/nav";
+// import CircularNavbar from "./common/nav/nav";
 
 function App() {
   useEffect(() => {
@@ -45,7 +48,6 @@ function App() {
         outerAlpha={0.2}
         innerScale={4.7}
         outerScale={10}
-        
         clickables={[
           'a',
           'input[type="text"]',
@@ -72,16 +74,18 @@ function App() {
         ]}
       />
       <Navbar />
-      <div className="pt-4">
+      <CircularNavbar />
+      <div className="">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/time" element={<Timeline />} />
           <Route path="/live" element={<Live />} />
           <Route path="/team" element={<Team />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/register" element={<Registration  />}  />
+          <Route path="/register" element={<Registration />} />
         </Routes>
       </div>
+      {/* <Footer /> */}
     </Router>
   );
 }

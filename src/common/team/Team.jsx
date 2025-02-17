@@ -1,12 +1,18 @@
 import React from "react";
 import "./Team.css";
+
+// Assets
 import webmaster from "../../assets/webmaster.png";
 import kamalesh from "../../assets/Kamalesh.jpg";
 import VC from "../../assets/vice.jpg";
 import aathithya from "../../assets/aathithya_event_management.jpg";
+import agish from "../../assets/Agishraj.jpg";
+import caroline from "../../assets/Caroline.jpg";
 import chairman from "../../assets/chairman.jpg";
 import deepthi from "../../assets/Deepthi.jpeg";
 import dhanasree from "../../assets/dhanasree.jpeg";
+import dinisha from "../../assets/Dinisha.jpg";
+import divya_k from "../../assets/Divya-K.jpg";
 import jayadharshini from "../../assets/Jayadharsini.jpg";
 import suranjana from "../../assets/Suranjana S.jpg";
 import bharath_d from "../../assets/bharath_d.jpg";
@@ -69,9 +75,8 @@ const teamMembers = [
     id: 8,
     name: "Caroline Suja J S",
     role: "MEDIA MANAGEMENT LEAD",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    image: caroline,
+    linkedIn: "www.linkedin.com/in/caroline-suja-0b56962a8",
   },
   {
     id: 9,
@@ -110,7 +115,7 @@ const teamMembers = [
     name: "Suranjana S",
     role: "MACHINE LEARNING TEAM",
     image: suranjana,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/suranjana-srinivasan-b76850257",
   },
   {
     id: 14,
@@ -118,36 +123,35 @@ const teamMembers = [
     role: "APP DEVELOPMENT TEAM",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/hvardhanan/",
   },
   {
     id: 15,
     name: "Deepthi P",
     role: "CONTENT WRITER",
     image: deepthi,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/deepthi-pavendan-b48853257/",
   },
   {
     id: 16,
     name: "Dhanasree L P",
     role: "EVENT MANAGER",
     image: dhanasree,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/dhanasree-l-p-63302b294/",
   },
   {
     id: 17,
     name: "Bharath D",
     role: "EVENT MANAGEMENT TEAM",
     image: bharath_d,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/bharath-d-2a60ab2a6/",
   },
   {
     id: 18,
     name: "AgishRaj R",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    image: agish,
+    linkedIn: "www.linkedin.com/in/agish-raj-83bbb1318",
   },
   {
     id: 19,
@@ -170,33 +174,31 @@ const teamMembers = [
     name: "Aathithya S K",
     role: "EVENT MANAGEMENT TEAM",
     image: aathithya,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/athithya-s-k/",
   },
   {
     id: 22,
     name: "Kamalesh S P",
     role: "EVENT MANAGEMENT TEAM",
     image: kamalesh,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/kamalesh-sp",
   },
   {
     id: 23,
     name: "Dinisha R",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
-  },
-  {
-    id: 23,
-    name: "Divya K",
-    role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: dinisha,
     linkedIn: "#",
   },
   {
     id: 24,
+    name: "Divya K",
+    role: "EVENT MANAGEMENT TEAM",
+    image: divya_k,
+    linkedIn: "https://www.linkedin.com/in/divya-k-3aa1862a2/",
+  },
+  {
+    id: 25,
     name: "Vishwa J",
     role: "EVENT MANAGEMENT TEAM",
     image:
@@ -204,7 +206,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 25,
+    id: 26,
     name: "Ramalingam S",
     role: "EVENT MANAGEMENT TEAM",
     image:
@@ -212,15 +214,15 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 26,
+    id: 27,
     name: "Bhuvaneshwari M",
     role: "EVENT MANAGEMENT - PR TEAM",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/bhuvaneshwari-mohanraj",
   },
   {
-    id: 27,
+    id: 28,
     name: "Himeshwar N",
     role: "EVENT MANAGEMENT - PR TEAM",
     image:
@@ -228,22 +230,23 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 28,
+    id: 29,
     name: "Jayadharshini M",
     role: "EVENT MANAGEMENT - PR TEAM",
     image: jayadharshini,
-    linkedIn: "#",
+    linkedIn:
+      "https://www.linkedin.com/in/jayadharsini-mathiyalagan-72607b2a2/",
   },
   {
-    id: 29,
+    id: 30,
     name: "Gokula Sarathy PS",
     role: "DESIGN TEAM",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/gokula-sarathy-p-s-8343121b8",
   },
   {
-    id: 30,
+    id: 31,
     name: "Farheen Tabassum H",
     role: "DESIGN TEAM",
     image:
@@ -251,12 +254,12 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 31,
+    id: 32,
     name: "Srivarshni S",
     role: "DESIGN TEAM",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/srivarshni-s-a161042a4/",
   },
 ];
 
@@ -271,9 +274,14 @@ const Team = () => {
             <div className="card-content">
               <h2>{member.name}</h2>
               <h3>{member.role}</h3>
-              <a href={member.linkedIn} target="_blank" rel="noreferrer">
-                Connect on LinkedIn 
-                 <img width={30} className="my-auto" src={linkedin} style={{display: "inline"}} />
+              <a href={member.linkedIn}  target="_blank" rel="noreferrer">
+                Connect on LinkedIn
+                <img
+                  width={30}
+                  className="my-auto"
+                  src={linkedin}
+                  style={{ display: "inline" }}
+                />
               </a>
             </div>
           </div>

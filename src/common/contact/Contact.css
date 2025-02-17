@@ -1,17 +1,14 @@
 .contact-page {
   text-align: center;
-}
-
-.contact-page h1 {
-  font-size: 36px;
-  color: #007dfb;
-  margin-bottom: 30px;
+  display: flex;
+  height: 80vh;
 }
 
 .contact-team {
   display: flex;
   flex-wrap: wrap;
   gap: 80px;
+  align-items: center;
   justify-content: center;
 }
 
@@ -46,9 +43,10 @@
 }
 
 .contact-content h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
-  color: #34495e;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
   margin: 0 0 10px 0;
 }
 
@@ -74,6 +72,7 @@
 .contact-content a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
 @media (max-width: 768px) {
   .contact-team {
     gap: 20px;
@@ -121,8 +120,6 @@
   .contact-content h2 {
     font-size: 20px;
   }
-
-
   .contact-content a {
     padding: 6px 12px;
     font-size: 16px;
@@ -130,29 +127,29 @@
 }
 
 @media (min-width: 1600px) {
-    .contact-team {
-      gap: 100px;
-    }
-  
-    .contact-card {
-      width: 300px;
-    }
-  
-    .contact-card img {
-      width: 240px;
-      height: 240px;
-    }
-  
-    .contact-content h2 {
-      font-size: 22px;
-    }
-  
-    .contact-content h3 {
-      font-size: 18px;
-    }
-  
-    .contact-content a {
-      padding: 12px 24px;
-      font-size: 16px;
-    }
+  .contact-team {
+    gap: 100px;
   }
+
+  .contact-card {
+    width: 300px;
+  }
+
+  .contact-card img {
+    width: 240px;
+    height: 240px;
+  }
+
+  .contact-content h2 {
+    font-size: 22px;
+  }
+
+  .contact-content h3 {
+    font-size: 18px;
+  }
+
+  .contact-content a {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}

@@ -9,7 +9,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setScrolled(offset > 50); 
+      setScrolled(offset > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -19,7 +19,7 @@ const Navbar = () => {
     };
   }, []);
   return (
-    <div>
+    <div className="lap-nav">
       <nav
         className={`navbar navbar-expand-lg navbar-dark ${
           scrolled ? "scrolled" : ""
@@ -50,6 +50,14 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
+                <Link
+                  className="nav-link fs-4 nav-container-color"
+                  to="/register"
+                >
+                  REGISTER
+                </Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link fs-3 nav-container-color" to="/team">
                   Team
                 </Link>
@@ -60,14 +68,6 @@ const Navbar = () => {
                   to="/contact"
                 >
                   Contact Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link fs-4 nav-container-color"
-                  to="/register"
-                >
-                  REGISTER
                 </Link>
               </li>
             </ul>
