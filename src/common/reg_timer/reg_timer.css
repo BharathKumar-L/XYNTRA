@@ -1,217 +1,151 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 
 .countdown-container {
-  text-align: center;
-  font-family: 'Orbitron', sans-serif;
-  color: #ffffff;
-  margin-top: 50px;
+    display: flex;
+    height: 55vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #00ffff;
+    font-family: "Orbitron", sans-serif;
+    text-align: center;
 }
 
-.heading {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #57a91c, 0 0 30px #8214ff;
 }
 
-.circle-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 80px;
-}
-.circle {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  background: radial-gradient(circle, rgba(0, 0, 0, 0.9) 50%, transparent 50%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.6);
+.time-section {
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin: 10px;
 }
 
-.circle::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: conic-gradient(
-    #00ff00 0%,
-    #00ff00 var(--fill, 0%),
-    rgba(255, 255, 255, 0.1) var(--fill, 0%),
-    rgba(255, 255, 255, 0.1) 100%
-  );
-  border-radius: 50%;
-  z-index: 1; 
+.time {
+    font-size: 8rem;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-.circle span {
-  position: relative;
-  font-size: 2.5rem;
-  font-weight: bold;
-  z-index: 3; 
-  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
-}
-
-.circle p {
-  position: absolute;
-  bottom: -30px;
-  font-size: 1.3rem;
-  z-index: 3; 
-  text-shadow: 0 0 3px #00ff00, 0 0 10px #00ff00;
-  background-color: rgba(0, 0, 0, 0.7); 
-  padding: 0 5px; 
-  border-radius: 4px; 
-}
-
-img {
-  height: auto;
-  margin-bottom: 20px;
-}
-
-@media (max-width: 1024px) {
-  .circle {
-    width: 120px;
-    height: 120px;
-  }
-
-  .circle span {
+.label {
     font-size: 2rem;
-  }
-
-  .circle p {
-    font-size: 0.9rem;
-  }
-
-  img {
-    max-width: 700px;
-  }
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+    text-transform: uppercase;
 }
 
-@media (max-width: 769px) {
-  .circle {
-    width: 85px;
-    height: 85px;
-  }
-
-  .circle span {
-    font-size: 2.2rem;
-  }
-
-  .circle p {
-    font-size: 1.1rem;
-  }
-
-  img {
-    margin-top: 70px;
-    max-width: 470px;
-  }
+.colon {
+    font-size: 4rem;
+    color: #00bbff;
+    text-shadow: 0 0 10px #00bbff, 0 0 20px #00bbff;
 }
 
-@media (max-width: 480px) {
-  .circle {
-    width: 85px;
-    height: 85px;
-  }
-
-  .circle span {
-    font-size: 2.5rem;
-  }
-
-  .circle p {
-    font-size: 1rem;
-  }
-
-  img {
-    max-width: 400px;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .circle-container {
-    gap: 20px;
-  }
+.expired-text {
+    font-size: 5rem;
+    color: red;
+    text-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px darkred;
 }
-/* @media (max-width: 376px) {
-  .circle {
-    width: 70px;
-    height: 70px;
-  }
+/* For large screens (desktops) */
+@media screen and (max-width: 1200px) {
+    .time {
+        font-size: 6rem;
+    }
 
-  .circle span {
-    font-size: 2.5rem;
-  }
+    .label {
+        font-size: 1.8rem;
+    }
 
-  .circle p {
-    font-size: 1rem;
-  }
-
-  img {
-    max-width: 370px;
-  }
-
-  .heading {
-    font-size: 2rem;
-  }
-
-  .circle-container {
-    gap: 20px;
-  }
+    .time-section {
+        width: 180px;
+        padding: 8px 16px;
+    }
 }
-@media (max-width: 321px) {
-  .circle {
-    width: 60px;
-    height: 60px;
-  }
 
-  .circle span {
-    font-size: 2.5rem;
-  }
+/* For tablets (landscape and portrait) */
+@media screen and (max-width: 1024px) {
 
-  .circle p {
-    font-size: 1rem;
-  }
+    .timer {
+        font-size: 3rem;
+    }
 
-  img {
-    max-width: 320px;
-  }
+    .time {
+        font-size: 5rem;
+    }
 
-  .heading {
-    font-size: 2rem;
-  }
+    .label {
+        font-size: 1.6rem;
+    }
 
-  .circle-container {
-    gap: 20px;
-  }
-} */
-/* @media (max-width: 1024px) {
-  .circle {
-    width: 160px;
-    height: 160px;
-  }
+    .time-section {
+        width: 150px;
+        padding: 6px 12px;
+    }
+}
 
-  .circle span {
-    font-size: 3.5rem;
-  }
+/* For mobile devices (portrait) */
+@media screen and (max-width: 768px) {
 
-  .circle p {
-    font-size: 1.7rem;
-  }
+    .timer {
+        font-size: 2.5rem;
+    }
 
-  img {
-    max-width: 720px;
-    margin-top: 150px;
-  }
+    .time {
+        font-size: 4rem;
+    }
 
-  .heading {
-    font-size: 2rem;
-  }
+    .label {
+        font-size: 1.4rem;
+    }
 
-  .circle-container {
-    gap: 20px;
-  }
-} */
+    .time-section {
+        width: 100px;
+        margin: 5px;
+        padding: 5px 10px;
+    }
+
+    .colon {
+        font-size: 3rem;
+    }
+
+    .expired-text {
+        font-size: 4rem;
+    }
+}
+
+/* For small mobile screens */
+@media screen and (max-width: 480px) {
+
+    .timer {
+        font-size: 2rem;
+    }
+
+    .time {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 1.2rem;
+    }
+
+    .time-section {
+        width: 100px;
+        padding: 5px;
+    }
+
+    .colon {
+        font-size: 2.5rem;
+    }
+
+    .expired-text {
+        font-size: 3rem;
+    }
+}

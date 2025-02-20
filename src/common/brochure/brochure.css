@@ -1,0 +1,22 @@
+.brochure-button {
+    position: fixed;
+    right: -30px;
+    top: 40%;
+    transform: translateY(100%) rotate(-90deg);  
+    background-color: rgba(255, 255, 255, 0.3 );
+    border: solid 1px #ffffff;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(15px);
+    color: white;
+    padding: 8px 16px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .brochure-button:hover {
+    background-color: #000000;
+  }
+  

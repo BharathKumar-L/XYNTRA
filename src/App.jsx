@@ -12,31 +12,34 @@ import { useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor"
 import Footer from "./common/footer/footer";
 import CircularNavbar from "./common/nav/nav";
-// import CircularNavbar from "./common/nav/nav";
+import LetterGlitch from './LetterGlitch';
+import Brochure from "./common/brochure/brochure";
+
+
 
 function App() {
-  useEffect(() => {
-    const disableRightClick = (e) => {
-      e.preventDefault();
-    };
-    const disableKeys = (e) => {
-      if (
-        (e.ctrlKey && (e.key === "u" || e.key === "U")) ||
-        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) ||
-        e.key === "F12"
-      ) {
-        e.preventDefault();
-      }
-    };
+  // useEffect(() => {
+  //   const disableRightClick = (e) => {
+  //     e.preventDefault();
+  //   };
+  //   const disableKeys = (e) => {
+  //     if (
+  //       (e.ctrlKey && (e.key === "u" || e.key === "U")) ||
+  //       (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) ||
+  //       e.key === "F12"
+  //     ) {
+  //       e.preventDefault();
+  //     }
+  //   };
 
-    document.addEventListener("contextmenu", disableRightClick);
-    document.addEventListener("keydown", disableKeys);
+  //   document.addEventListener("contextmenu", disableRightClick);
+  //   document.addEventListener("keydown", disableKeys);
 
-    return () => {
-      document.removeEventListener("contextmenu", disableRightClick);
-      document.removeEventListener("keydown", disableKeys);
-    };
-  }, []);
+  //   return () => {
+  //     document.removeEventListener("contextmenu", disableRightClick);
+  //     document.removeEventListener("keydown", disableKeys);
+  //   };
+  // }, []);
 
   return (
     <Router>
@@ -72,6 +75,10 @@ function App() {
             }
           }
         ]}
+        style ={{
+          position: 'absolute',
+    zIndex: 10000,
+        }}
       />
       <Navbar />
       <CircularNavbar />
@@ -85,7 +92,8 @@ function App() {
           <Route path="/register" element={<Registration />} />
         </Routes>
       </div>
-      {/* <Footer /> */}
+      <Brochure />  
+      <Footer />
     </Router>
   );
 }

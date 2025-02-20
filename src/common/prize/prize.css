@@ -1,0 +1,155 @@
+.prize{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    place-items: center;
+}
+
+.matrix-container{
+    display: flex;
+    flex-direction: row;
+    gap: 20%;
+    justify-content: center;
+    text-align: center;
+}
+
+.matrix-text {
+    color: #d8d8d8;
+    font-size: 60px;
+    font-family: monospace;
+    position: relative;
+    text-shadow: 0 0 10px #d8d8d8, 0 0 20px #d8d8d8, 0 0 30px #d8d8d8;
+    z-index: 2;
+}
+
+.matrix-text::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: glitch 2s infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    transform: translate(-2px, -2px);
+    color: #d8d8d8;
+    text-shadow: 0 0 5px #d8d8d8   , 0 0 15px #d8d8d8;
+}
+
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(0deg,
+            rgba(0, 255, 0, 0.1) 0,
+            rgba(0, 255, 0, 0.2) 2px,
+            transparent 4px);
+    animation: rain 10s linear infinite;
+    z-index: 1;
+    /* Place it behind the text */
+}
+
+/* Animation for the rain effect */
+@keyframes rain {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+/* Glitch effect for the text */
+@keyframes glitch {
+
+    0%,
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+        transform: translate(0);
+    }
+
+    33% {
+        clip-path: polygon(0 0, 100% 0, 100% 15%, 0 15%);
+        transform: translate(-5px, -5px);
+    }
+
+    66% {
+        clip-path: polygon(0 85%, 100% 85%, 100% 100%, 0 100%);
+        transform: translate(5px, 5px);
+    }
+}
+
+
+.neon-text {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #ff005e, 0 0 10px #ff005e, 0 0 20px #ff005e, 0 0 40px #ff005e, 0 0 80px #ff005e;
+    }
+    100% {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff, 0 0 40px #00d4ff, 0 0 80px #00d4ff, 0 0 160px #00d4ff;
+    }
+}
+.prize-card {
+    border: #fff solid 1px;
+    margin: 0 auto;
+    width: 350px;
+    height: 300px;
+    padding: 4%;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    position: relative;
+    transition: box-shadow 0.3s ease-in-out;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+      box-shadow: 0 0 5px 0 rgba(0, 255, 255, 0.5), 0 0 15px 0 rgba(0, 255, 255, 0.5), 0 0 30px 0 rgba(0, 255, 255, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 15px 0 rgba(0, 255, 255, 1), 0 0 30px 0 rgba(0, 255, 255, 1), 0 0 60px 0 rgba(0, 255, 255, 1);
+    }
+    100% {
+      box-shadow: 0 0 5px 0 rgba(0, 255, 255, 0.5), 0 0 15px 0 rgba(0, 255, 255, 0.5), 0 0 30px 0 rgba(0, 255, 255, 0.5);
+    }
+  }
+
+#sprize,#tprize{
+    margin-top: 150px;
+}
+
+.amt{
+    display: block;
+    font-size: 30px;
+    color: #ff005e;
+}
+
+.prizecard-img >img {
+    width: 70%;
+    border-radius: 50%;
+}
+
+#fprize{
+    background: url('../../assets/1stprize.png');
+    background-size: cover;
+}
+
+#sprize{
+    background: url('../../assets/2ndprize.png');
+    background-size: cover;
+}
+
+#tprize{
+    background: url('../../assets/3rdprize.png');
+    background-size: cover;
+}

@@ -10,33 +10,33 @@ const CircularNavbar = () => {
       <div className={`cnav-navbar ${active ? "cnav-active" : ""}`}>
         <div className="cnav-toggle" onClick={() => setActive(!active)}>
           <span className="cnav-toggle-icon">
-            {active ? "✖" : "☰"} 
+            {active ? "✖" : "☰"}
           </span>
         </div>
         <ul className="cnav-items">
           <li className="cnav-item">
             <Link to="/" className="cnav-link">
-            🏠
+              🏠
             </Link>
           </li>
           <li className="cnav-item">
             <Link to="/time" className="cnav-link">
-            🕒
+              🕒
             </Link>
           </li>
           <li className="cnav-item">
             <Link to="/team" className="cnav-link">
-            👥
+              👥
             </Link>
           </li>
           <li className="cnav-item">
             <Link to="/contact" className="cnav-link">
-            📞
+              📞
             </Link>
           </li>
           <li className="cnav-item">
             <Link to="/register" className="cnav-link">
-            📝
+              📝
             </Link>
           </li>
         </ul>

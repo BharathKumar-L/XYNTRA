@@ -542,7 +542,7 @@ const Registration = () => {
     <div className="container">
       <div id="Container-input">
         <form className="form" onSubmit={handleSubmit}>
-          <div id="login-lable">BattleEidos</div>
+          <div id="login-lable">XYNTRA</div>
           {renderPage()}
           <div className="button-container">
             {currentPage > 1 && (

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./reg_timer.css";
 
 const Regtimer = () => {
-  const targetDate = new Date("Jan 31, 2025 00:00:00").getTime();
+  const targetDate = new Date("Mar 31, 2025 00:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
@@ -11,13 +11,13 @@ const Regtimer = () => {
     const distance = targetDate - now;
 
     if (distance < 0) {
-      return { days: 0, hours: 0, minutes: 0, seconds: 0, expired: true };
+      return { days: "00", hours: "00", minutes: "00", seconds: "00", expired: true };
     }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, "0");
+    const hours = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, "0");
+    const minutes = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, "0");
+    const seconds = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, "0");
 
     return { days, hours, minutes, seconds, expired: false };
   }
@@ -31,42 +31,34 @@ const Regtimer = () => {
   }, []);
 
   return (
-    <div className=" countdown-container">
-      <div className="countdown-content">
-        <img src={logo} alt="logo" />
-      </div>
+    <div className="countdown-container">
       {!timeLeft.expired ? (
-        <div className="circle-container">
-          <Circle value={timeLeft.days} max={365} label="Days" />
-          <Circle value={timeLeft.hours} max={24} label="Hours" />
-          <Circle value={timeLeft.minutes} max={60} label="Minutes" />
-          <Circle value={timeLeft.seconds} max={60} label="Seconds" />
+        <div className="timer">
+          <div className="time-section">
+            <span className="time">{timeLeft.days}</span>
+            <span className="label">Days</span>
+          </div>
+          <span className="colon">:</span>
+          <div className="time-section">
+            <span className="time">{timeLeft.hours}</span>
+            <span className="label">Hours</span>
+          </div>
+          <span className="colon">:</span>
+          <div className="time-section">
+            <span className="time">{timeLeft.minutes}</span>
+            <span className="label">Minutes</span>
+          </div>
+          <span className="colon">:</span>
+          <div className="time-section">
+            <span className="time">{timeLeft.seconds}</span>
+            <span className="label">Seconds</span>
+          </div>
         </div>
       ) : (
-        <p style={styles.expired}>REGISTRATIONS CLOSED</p>
+        <p className="expired-text">REGISTRATIONS CLOSED</p>
       )}
     </div>
   );
-};
-
-const Circle = ({ value, max, label }) => {
-  const fill = (value / max) * 100;
-
-  return (
-    <div
-      className="circle"
-      style={{
-        "--fill": `${fill}%`,
-      }}
-    >
-      <span>{value}</span>
-      <p>{label}</p>
-    </div>
-  );
-};
-
-const styles = {
-  expired: { fontSize: "5rem", color: "white" },
 };
 
 export default Regtimer;

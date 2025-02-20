@@ -7,6 +7,7 @@ import Footer from '../../common/footer/footer';
 import Regtimer from '../../common/reg_timer/reg_timer';
 import FAQ from '../../common/faq';
 import Regbutton from '../../common/button/reg-button';
+import Prize from '../../common/prize/prize';
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             {/* <Hero/> */}
             <Regtimer />
             <Regbutton />
+            <Prize />
             <FAQ />
         </div>
     );

@@ -4,7 +4,7 @@ import "./Team.css";
 // Assets
 import webmaster from "../../assets/webmaster.png";
 import kamalesh from "../../assets/Kamalesh.jpg";
-import VC from "../../assets/vice.jpg";
+import secretary from "../../assets/vice.jpg";
 import aathithya from "../../assets/aathithya_event_management.jpg";
 import agish from "../../assets/Agishraj.jpg";
 import caroline from "../../assets/Caroline.jpg";
@@ -28,28 +28,35 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Joderick Sherwin",
+    name: "Gokulasarathy P S",
     role: "VICE CHAIRMAN",
-    image: VC,
+    image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "https://www.linkedin.com/in/joderick-sherwin-j/",
   },
   {
     id: 3,
+    name: "Joderick Sherwin",
+    role: "SECRETARY",
+    image: secretary,
+    linkedIn: "https://www.linkedin.com/in/joderick-sherwin-j/"
+  },
+  {
+    id: 4,
     name: "Deepiga Dharshini C",
-    role: "SECRETARY & TREASURER",
+    role: "TREASURER",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "https://www.linkedin.com/in/deepiga-dharshini-ts20",
   },
   {
-    id: 4,
+    id: 5,
     name: "Bharath Kumar L",
     role: "WEBMASTER",
     image: webmaster,
     linkedIn: "https://www.linkedin.com/in/bharath-kumar-l-955304289/",
   },
   {
-    id: 5,
+    id: 6,
     name: "Roshini D",
     role: "WEB DEVELOPMENT LEAD",
     image:
@@ -57,14 +64,14 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 6,
+    id: 7,
     name: "Joderick Sherwin",
     role: "MACHINE LEARNING LEAD",
-    image: VC,
+    image: secretary,
     linkedIn: "https://www.linkedin.com/in/joderick-sherwin-j/",
   },
   {
-    id: 7,
+    id: 8,
     name: "Amrutha B J",
     role: "APP DEVELOPMENT LEAD",
     image:
@@ -72,14 +79,14 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 8,
+    id: 9,
     name: "Caroline Suja J S",
     role: "MEDIA MANAGEMENT LEAD",
     image: caroline,
     linkedIn: "www.linkedin.com/in/caroline-suja-0b56962a8",
   },
   {
-    id: 9,
+    id: 10,
     name: "Ragul Sowmiyanarayanan G K",
     role: "EVENT MANAGEMENT LEAD",
     image:
@@ -87,7 +94,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 10,
+    id: 11,
     name: "Nandha Kumar P",
     role: "DESIGN TEAM LEAD",
     image:
@@ -95,7 +102,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 11,
+    id: 12,
     name: "Nithish Rao P",
     role: "WEB DEVELOPMENT TEAM",
     image:
@@ -103,7 +110,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 12,
+    id: 13,
     name: "Varun G",
     role: "WEB DEVELOPMENT TEAM",
     image:
@@ -111,14 +118,14 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 13,
+    id: 14,
     name: "Suranjana S",
     role: "MACHINE LEARNING TEAM",
     image: suranjana,
     linkedIn: "https://www.linkedin.com/in/suranjana-srinivasan-b76850257",
   },
   {
-    id: 14,
+    id: 15,
     name: "Sri Harshavardhanan R",
     role: "APP DEVELOPMENT TEAM",
     image:
@@ -126,35 +133,35 @@ const teamMembers = [
     linkedIn: "https://www.linkedin.com/in/hvardhanan/",
   },
   {
-    id: 15,
+    id: 16,
     name: "Deepthi P",
     role: "CONTENT WRITER",
     image: deepthi,
     linkedIn: "https://www.linkedin.com/in/deepthi-pavendan-b48853257/",
   },
   {
-    id: 16,
+    id: 17,
     name: "Dhanasree L P",
     role: "EVENT MANAGER",
     image: dhanasree,
     linkedIn: "https://www.linkedin.com/in/dhanasree-l-p-63302b294/",
   },
   {
-    id: 17,
+    id: 18,
     name: "Bharath D",
     role: "EVENT MANAGEMENT TEAM",
     image: bharath_d,
     linkedIn: "https://www.linkedin.com/in/bharath-d-2a60ab2a6/",
   },
   {
-    id: 18,
+    id: 19,
     name: "AgishRaj R",
     role: "EVENT MANAGEMENT TEAM",
     image: agish,
     linkedIn: "www.linkedin.com/in/agish-raj-83bbb1318",
   },
   {
-    id: 19,
+    id: 20,
     name: "Bharath B",
     role: "EVENT MANAGEMENT TEAM",
     image:
@@ -162,7 +169,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 20,
+    id: 21,
     name: "Swathi G",
     role: "EVENT MANAGEMENT TEAM",
     image:
@@ -170,35 +177,35 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 21,
+    id: 22,
     name: "Aathithya S K",
     role: "EVENT MANAGEMENT TEAM",
     image: aathithya,
     linkedIn: "https://www.linkedin.com/in/athithya-s-k/",
   },
   {
-    id: 22,
+    id: 23,
     name: "Kamalesh S P",
     role: "EVENT MANAGEMENT TEAM",
     image: kamalesh,
     linkedIn: "https://www.linkedin.com/in/kamalesh-sp",
   },
   {
-    id: 23,
+    id: 24,
     name: "Dinisha R",
     role: "EVENT MANAGEMENT TEAM",
     image: dinisha,
     linkedIn: "#",
   },
   {
-    id: 24,
+    id: 25,
     name: "Divya K",
     role: "EVENT MANAGEMENT TEAM",
     image: divya_k,
     linkedIn: "https://www.linkedin.com/in/divya-k-3aa1862a2/",
   },
   {
-    id: 25,
+    id: 26,
     name: "Vishwa J",
     role: "EVENT MANAGEMENT TEAM",
     image:
@@ -206,7 +213,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 26,
+    id: 27,
     name: "Ramalingam S",
     role: "EVENT MANAGEMENT TEAM",
     image:
@@ -214,7 +221,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 27,
+    id: 28,
     name: "Bhuvaneshwari M",
     role: "EVENT MANAGEMENT - PR TEAM",
     image:
@@ -222,7 +229,7 @@ const teamMembers = [
     linkedIn: "https://www.linkedin.com/in/bhuvaneshwari-mohanraj",
   },
   {
-    id: 28,
+    id: 29,
     name: "Himeshwar N",
     role: "EVENT MANAGEMENT - PR TEAM",
     image:
@@ -230,7 +237,7 @@ const teamMembers = [
     linkedIn: "#",
   },
   {
-    id: 29,
+    id: 30,
     name: "Jayadharshini M",
     role: "EVENT MANAGEMENT - PR TEAM",
     image: jayadharshini,
@@ -238,20 +245,12 @@ const teamMembers = [
       "https://www.linkedin.com/in/jayadharsini-mathiyalagan-72607b2a2/",
   },
   {
-    id: 30,
+    id: 31,
     name: "Gokula Sarathy PS",
     role: "DESIGN TEAM",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "https://www.linkedin.com/in/gokula-sarathy-p-s-8343121b8",
-  },
-  {
-    id: 31,
-    name: "Farheen Tabassum H",
-    role: "DESIGN TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
   },
   {
     id: 32,
@@ -261,6 +260,22 @@ const teamMembers = [
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "https://www.linkedin.com/in/srivarshni-s-a161042a4/",
   },
+  {
+    id: 33,
+    name: "Janani T",
+    role: "DESIGN TEAM",
+    image:
+    "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    linkedIn: "#",
+  },
+  {
+    id: 34,
+    name: "DivyaDharshini K",
+    role: "DESIGN TEAM",
+    image:
+    "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    linkedIn: "#",
+  }
 ];
 
 const Team = () => {

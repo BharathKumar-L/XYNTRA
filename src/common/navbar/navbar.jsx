@@ -21,10 +21,11 @@ const Navbar = () => {
   return (
     <div className="lap-nav">
       <nav
-        className={`navbar navbar-expand-lg navbar-dark ${
-          scrolled ? "scrolled" : ""
-        }`}
+        className={`navbar navbar-expand-lg navbar-dark ${scrolled ? "scrolled" : ""
+          }`}
       >
+
+        <img src={logo} alt="logo" className="logo" />
         <div className="container-fluid nav-container">
           <button
             className="navbar-toggler"

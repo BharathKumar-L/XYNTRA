@@ -85,7 +85,7 @@ h2.faq-title {
         width: 98vw;
     }
     .accordion {
-        width: 100%;
+        width: 50%;
     }
 }
 @media (max-width: 1024px) {

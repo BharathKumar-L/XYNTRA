@@ -1,19 +1,19 @@
 .register-button-container {
-  margin-top: 80px;
   text-align: center;
+  margin-bottom: 80px;
 }
 
 .register-button {
   font-family: "Orbitron", sans-serif;
   font-size: 1.5rem;
   color: #ffffff;
-  background: linear-gradient(90deg, #00ff00, #00aa00, #00ff00);
-  border: 2px solid #00ff00;
+  background: linear-gradient(90deg, #00e5ff, #00e5ff, #00e5ff);
+  border: 2px solid #00e5ff;
   padding: 15px 30px;
   border-radius: 5px;
   cursor: pointer;
-  text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
-  box-shadow: 0 0 15px rgba(0, 255, 0, 0.8), 0 0 30px rgba(0, 255, 0, 0.6);
+  text-shadow: 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  box-shadow: 0 0 15px rgba(0, 255, 238, 0.8), 0 0 30px rgba(0, 255, 251, 0.6);
   transition: all 0.3s ease-in-out;
 }
 
@@ -30,7 +30,7 @@
   box-shadow: 0 0 25px rgba(255, 170, 0, 0.8), 0 0 50px rgba(255, 85, 0, 0.6);
   transform: scale(0.95);
 }
-@media (max-width: 769px) {
+/* @media (max-width: 769px) {
   .register-button-container {
     margin-bottom: 200px;
   }
@@ -52,4 +52,4 @@
     margin-top: 130px;
     margin-bottom: 200px;
   }
-}
+} */
