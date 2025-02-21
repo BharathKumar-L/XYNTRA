@@ -1,9 +1,17 @@
 .footer{
     width: 98vw;
+    padding: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
     margin-bottom: 0;
 }
 .logofooter{
     width: 25%;
+}
+
+.icons{
+    width: 25%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
 }

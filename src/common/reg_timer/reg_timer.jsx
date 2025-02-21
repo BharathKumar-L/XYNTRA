@@ -32,6 +32,7 @@ const Regtimer = () => {
 
   return (
     <div className="countdown-container">
+        <img src={logo} alt="logo" className="logo" id="logo-img" />
       {!timeLeft.expired ? (
         <div className="timer">
           <div className="time-section">
@@ -41,17 +42,17 @@ const Regtimer = () => {
           <span className="colon">:</span>
           <div className="time-section">
             <span className="time">{timeLeft.hours}</span>
-            <span className="label">Hours</span>
+            <span className="label">Hours </span>
           </div>
           <span className="colon">:</span>
           <div className="time-section">
             <span className="time">{timeLeft.minutes}</span>
-            <span className="label">Minutes</span>
+            <span className="label">Minutes </span>
           </div>
           <span className="colon">:</span>
           <div className="time-section">
             <span className="time">{timeLeft.seconds}</span>
-            <span className="label">Seconds</span>
+            <span className="label">Seconds </span>
           </div>
         </div>
       ) : (

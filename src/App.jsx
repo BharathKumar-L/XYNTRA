@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route,useLocation } from "react-router-dom";
 import Home from "./pages/home";
 import Navbar from "./common/navbar/navbar";
 import Timeline from "./common/timeline";
@@ -14,6 +14,7 @@ import Footer from "./common/footer/footer";
 import CircularNavbar from "./common/nav/nav";
 import LetterGlitch from './LetterGlitch';
 import Brochure from "./common/brochure/brochure";
+import Ins from "./common/ins&guides/ins";
 
 
 
@@ -40,9 +41,10 @@ function App() {
   //     document.removeEventListener("keydown", disableKeys);
   //   };
   // }, []);
-
+ 
   return (
     <Router>
+      <Layout>
       <ParticleBackground id="particle-canvas" />
       <AnimatedCursor
         innerSize={10}
@@ -92,10 +94,24 @@ function App() {
           <Route path="/register" element={<Registration />} />
         </Routes>
       </div>
-      <Brochure />  
       <Footer />
+      </Layout>
     </Router>
   );
 }
 
 export default App;
+
+const Layout = ({ children }) => {
+  const location = useLocation();
+
+  return (
+    <>
+      {children}
+      {location.pathname !== "/" && (<>
+        <Brochure />
+        <Ins />
+      </>)}
+    </>
+  );
+};

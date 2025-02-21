@@ -10,6 +10,7 @@ const Prize = () => {
       <h1 class="neon-text" >PRIZE POOL</h1>
       <div className='matrix-container'>
         <div className="prize-card" id='sprize'>
+            <h3 className='amt ' >Cash Prize of ₹8,000</h3>
         </div>
         <div className="prize-card" id='fprize'> 
           <div className="prizecard-amt">
