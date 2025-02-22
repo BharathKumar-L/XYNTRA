@@ -9,7 +9,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
-      setScrolled(offset >= 50);
+      setScrolled(offset > 30);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -24,6 +24,10 @@ const Navbar = () => {
         className={`navbar navbar-expand-lg navbar-dark ${scrolled ? "scrolled" : ""
           }`}
       >
+        {scrolled && <img src={logo} alt="logo"
+          className="displaylogo"
+        />}
+
         <div className="container-fluid nav-container">
           <button
             className="navbar-toggler"

@@ -5,13 +5,46 @@
     backdrop-filter: blur(30px);
     margin-bottom: 0;
 }
+
 .logofooter{
     width: 25%;
 }
 
+.footercontent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20%;
+}
+
+.creators{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.creators > h1{
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+.creators > h3{
+    font-size: 1.5rem;
+}
+
+
 .icons{
     width: 25%;
     display: flex;
-    justify-content: space-around;
+    place-self: center;
+    gap: 20px;
+    justify-content: center;
     flex-direction: row;
+}
+
+.logos{
+    place-self: center;
+    place-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 15%;
 }
