@@ -2,33 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Registration.css";
 
 const Registration = () => {
-  const kiplingPoem = `<p>IEEE Computer Society - <span>BATTLEEIDOS</span> Look dad i going to <span>WIN!</span> ... (repeated)</p>`;
-
-  useEffect(() => {
-    const textDivs = document.querySelectorAll(".text");
-    textDivs.forEach((div) => {
-      div.innerHTML = kiplingPoem;
-    });
-
-    const contentDiv = document.querySelector(".content");
-
-    function adjustContentSize() {
-      const viewportWidth = window.innerWidth;
-      const baseWidth = 1000;
-      const scaleFactor =
-        viewportWidth < baseWidth ? (viewportWidth / baseWidth) * 0.9 : 1;
-      if (contentDiv) {
-        contentDiv.style.transform = `scale(${scaleFactor})`;
-      }
-    }
-
-    window.addEventListener("resize", adjustContentSize);
-    adjustContentSize();
-
-    return () => {
-      window.removeEventListener("resize", adjustContentSize);
-    };
-  }, []);
 
   const [formData, setFormData] = useState({
     teamName: "",

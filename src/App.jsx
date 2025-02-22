@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route,useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./pages/home";
 import Navbar from "./common/navbar/navbar";
 import Timeline from "./common/timeline";
@@ -12,11 +12,7 @@ import { useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor"
 import Footer from "./common/footer/footer";
 import CircularNavbar from "./common/nav/nav";
-import LetterGlitch from './LetterGlitch';
 import Brochure from "./common/brochure/brochure";
-import Ins from "./common/ins&guides/ins";
-
-
 
 function App() {
   // useEffect(() => {
@@ -41,60 +37,60 @@ function App() {
   //     document.removeEventListener("keydown", disableKeys);
   //   };
   // }, []);
- 
+
   return (
     <Router>
       <Layout>
-      <ParticleBackground id="particle-canvas" />
-      <AnimatedCursor
-        innerSize={10}
-        outerSize={10}
-        color='255,255,255'
-        outerAlpha={0.2}
-        innerScale={4.7}
-        outerScale={10}
-        clickables={[
-          'a',
-          'input[type="text"]',
-          'input[type="email"]',
-          'input[type="number"]',
-          'input[type="submit"]',
-          'input[type="image"]',
-          'label[for]',
-          'select',
-          'textarea',
-          'button',
-          '.link',
-          {
-            target: '.custom',
-            options: {
-              innerSize: 12,
-              outerSize: 12,
-              color: '255, 255, 255',
-              outerAlpha: 0.3,
-              innerScale: 0.7,
-              outerScale: 5
+        <ParticleBackground id="particle-canvas" />
+        <AnimatedCursor
+          innerSize={10}
+          outerSize={10}
+          color='255,255,255'
+          outerAlpha={0.2}
+          innerScale={4.7}
+          outerScale={10}
+          clickables={[
+            'a',
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.link',
+            {
+              target: '.custom',
+              options: {
+                innerSize: 12,
+                outerSize: 12,
+                color: '255, 255, 255',
+                outerAlpha: 0.3,
+                innerScale: 0.7,
+                outerScale: 5
+              }
             }
-          }
-        ]}
-        style ={{
-          position: 'absolute',
-    zIndex: 10000,
-        }}
-      />
-      <Navbar />
-      <CircularNavbar />
-      <div className="">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/time" element={<Timeline />} />
-          <Route path="/live" element={<Live />} />
-          <Route path="/team" element={<Team />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/register" element={<Registration />} />
-        </Routes>
-      </div>
-      <Footer />
+          ]}
+          style={{
+            position: 'absolute',
+            zIndex: 10000,
+          }}
+        />
+        <Navbar />
+        <CircularNavbar />
+        <div className="">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/time" element={<Timeline />} />
+            <Route path="/live" element={<Live />} />
+            <Route path="/team" element={<Team />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/register" element={<Registration />} />
+          </Routes>
+        </div>
+        <Footer />
       </Layout>
     </Router>
   );
@@ -108,10 +104,7 @@ const Layout = ({ children }) => {
   return (
     <>
       {children}
-      {location.pathname !== "/" && (<>
-        <Brochure />
-        <Ins />
-      </>)}
+      {location.pathname !== "/" && <Brochure />}
     </>
   );
 };

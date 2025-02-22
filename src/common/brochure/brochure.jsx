@@ -4,13 +4,22 @@ import brochure from '../../assets/Brochure.pdf'
 
 const Brochure = () => {
   return (
-    <a
-      href={brochure}
+    <div className="file">
+      <a
+        href={brochure}
+        download
+        className="brochure-button"
+      >
+        Brochure
+      </a>
+      <a
+      href="#"
       download
       className="brochure-button"
     >
-        Brochure
+        Guidelines
     </a>
+    </div>
   );
 };
 
