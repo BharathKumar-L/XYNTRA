@@ -19,6 +19,7 @@ import Ins from "./common/ins&guides/ins";
 
 
 function App() {
+  
   // useEffect(() => {
   //   const disableRightClick = (e) => {
   //     e.preventDefault();
