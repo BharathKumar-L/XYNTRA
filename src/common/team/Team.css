@@ -53,8 +53,8 @@
   font-size: 20px;
   font-weight: 600;
   color: #00ffcc; /* Soft neon cyan */
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
-  margin: 0 0 10px 0;
+  text-shadow: 0 0 10px #00ffcc;
+  margin: 10px 0 10px 0;
 }
 
 

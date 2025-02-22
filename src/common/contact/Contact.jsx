@@ -10,27 +10,34 @@ const Contact = () => {
       id: 1,
       name: "Bhuvaanesh R",
       image: chairman,
-      mob_no: "tel:7339624803",
+      mob_no: "tel:+917339624803",
     },
     {
       id: 2,
-      name: "Joderick Sherwin",
-      image: VC,
-      mob_no: "tel:7094944667",
+      name: "Gokulasarathy P S",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      mob_no: "tel:+919940013827",
     },
     {
       id: 3,
-      name: "Deepiga Dharshini C",
-      image:
-        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-      mob_no: "tel:8220439219",
+      name: "Joderick Sherwin",
+      image: VC,
+      mob_no: "tel:+917094944667",
     },
     {
       id: 4,
+      name: "Deepiga Dharshini C",
+      image:
+        "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+      mob_no: "tel:+918220439219",
+    },
+    {
+      id: 5,
       name: "Bharath Kumar L",
       image: webmaster,
-      mob_no: "tel:6369106579",
-    },
+      mob_no: "tel:+916369106579",
+    }
   ];
   return (
     <div className="contact-page">

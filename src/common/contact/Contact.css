@@ -2,13 +2,13 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  height: 80vh;
+  margin: 20px;
 }
 
 .contact-team {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 60px;
   align-items: center;
   justify-content: center;
 }
@@ -44,11 +44,11 @@
 }
 
 .contact-content h2 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 600;
   color: #00ffcc;
-  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc;
-  margin: 0 0 10px 0;
+  text-shadow: 0 0 10px #00ffcc;
+  margin: 12px 0 12px 0;
 }
 
 .contact-content h3 {

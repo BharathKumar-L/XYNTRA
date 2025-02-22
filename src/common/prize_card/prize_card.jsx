@@ -127,6 +127,20 @@ const VARIANTS = {
     speed: 80,
     colors: "#fecdd3,#fda4af,#e11d48",
     noFocus: true
+  },
+  gold: {
+    activeColor: "#ffd700",
+    gap: 6,
+    speed: 80,
+    colors: "#ffd700,#ffc107,#ffb300",
+    noFocus: false
+  },
+  red: {
+    activeColor: "#f87171",
+    gap: 6,
+    speed: 60,
+    colors: "#f87171,#dc2626,#991b1b",
+    noFocus: false
   }
 };
 
