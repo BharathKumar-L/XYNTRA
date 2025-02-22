@@ -15,6 +15,7 @@ import CircularNavbar from "./common/nav/nav";
 import Brochure from "./common/brochure/brochure";
 
 function App() {
+  
   // useEffect(() => {
   //   const disableRightClick = (e) => {
   //     e.preventDefault();
