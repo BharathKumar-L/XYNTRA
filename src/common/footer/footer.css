@@ -1,5 +1,4 @@
 .footer{
-    width: 98vw;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
@@ -27,7 +26,9 @@
     margin-bottom: 20px;
     font-size: 2rem;
 }
-.creators > h3{
+.creators > h3 > .linked{
+    text-decoration: none;
+    color:wheat;
     font-size: 1.5rem;
 }
 

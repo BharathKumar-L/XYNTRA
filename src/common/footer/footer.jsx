@@ -47,10 +47,10 @@ const Footer = () => {
         </div>
         <div className="creators">
           <h1>Website Developed by</h1>
-          <h3>Bharath Kumar L</h3>
-          <h3>Roshini D</h3>
-          <h3>Nithish Rao P</h3>
-          <h3>Varun G</h3>
+          <h3><a href="https://www.linkedin.com/in/bharathkumar-l/" target="_blank" className='linked' rel="noopener noreferrer">Bharath Kumar L</a></h3>
+          <h3><a href="https://www.linkedin.com/in/roshini-d/" target="_blank" className='linked' rel="noopener noreferrer">Roshini D</a></h3>
+          <h3><a href="https://www.linkedin.com/in/nithish-rao-p/" target="_blank" className='linked' rel="noopener noreferrer">Nithish Rao P</a></h3>
+          <h3><a href="https://www.linkedin.com/in/varun-g/" target="_blank" className='linked' rel="noopener noreferrer">Varun G</a></h3>
         </div>
       </div>
     </footer>

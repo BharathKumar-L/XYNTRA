@@ -26,6 +26,10 @@
     place-items: center;
 }
 
+.neon-text{
+    color: #ffd700;
+}
+
 .sprize,.tprize{
     margin-top: 100px;
 }
