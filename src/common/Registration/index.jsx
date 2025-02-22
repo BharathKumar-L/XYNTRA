@@ -72,6 +72,14 @@ const Registration = () => {
     member4Gender: "Male",
     member4IEEEMember: "No",
     member4MembershipID: "",
+    // Member 5 Details
+    member5Name: "",
+    member5Phone: "",
+    member5Email: "",
+    member5College: "",
+    member5Gender: "Male",
+    member5IEEEMember: "No",
+    member5MembershipID: "",
     // Abstract submission
     abstractFile: null,
   });
@@ -444,6 +452,69 @@ const Registration = () => {
               name="member4MembershipID"
               placeholder="Member 4 IEEE Membership ID"
               value={formData.member4MembershipID}
+              onChange={handleChange}
+            />
+          )}
+
+           {/* Member 4 Details */}
+           <h2>Member 5</h2>
+          <input
+            className="form-content"
+            type="text"
+            name="member5Name"
+            placeholder="Member 5 Name"
+            value={formData.member5Name}
+            onChange={handleChange}
+          />
+          <input
+            className="form-content"
+            type="tel"
+            name="member5Phone"
+            placeholder="Member 5 Phone Number"
+            value={formData.member5Phone}
+            onChange={handleChange}
+          />
+          <input
+            className="form-content"
+            type="email"
+            name="member5Email"
+            placeholder="Member 5 Email"
+            value={formData.member5Email}
+            onChange={handleChange}
+          />
+          <input
+            className="form-content"
+            type="text"
+            name="member5College"
+            placeholder="Member 5 College"
+            value={formData.member5College}
+            onChange={handleChange}
+          />
+          <select
+            className="form-content"
+            name="member5Gender"
+            value={formData.member5Gender}
+            onChange={handleChange}
+          >
+            <option value="Male">Gender: Male</option>
+            <option value="Female">Gender: Female</option>
+          </select>
+          <select
+            className="form-content"
+            name="member5IEEEMember"
+            value={formData.member5IEEEMember}
+            onChange={handleChange}
+          >
+            <option value="No">IEEE Member? No</option>
+            <option value="Yes">IEEE Member? Yes</option>
+          </select>
+          {formData.member5IEEEMember === "Yes" && (
+            <input
+              className="form-content"
+              type="text"
+              name="member5MembershipID"
+              placeholder="Member 5 IEEE Membership ID"
+              value={formData.member5MembershipID}
               onChange={handleChange}
             />
           )}
