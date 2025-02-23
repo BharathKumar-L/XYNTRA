@@ -10,7 +10,7 @@ const Timeline = () => {
   const [pathLength, setPathLength] = useState(0);
   const [pacmanProgress, setPacmanProgress] = useState(0);
   const [pacmanRotation, setPacmanRotation] = useState(0);
-  const [stopAtPoint, setStopAtPoint] = useState(1);
+  const [stopAtPoint, setStopAtPoint] = useState(6);
   const [isAnimating, setIsAnimating] = useState(true);
   const [isJumping, setIsJumping] = useState(false);
   const [jumpOffset, setJumpOffset] = useState(0);
@@ -38,25 +38,25 @@ const Timeline = () => {
 
   const calculatePathPosition = (point) => {
     if (!pathRef.current) return 0;
-    
+
     const totalLength = pathRef.current.getTotalLength();
     let bestPosition = 0;
     let closestDistance = Infinity;
-    
+
     // Increase the number of sample points for better accuracy
     const samples = 2000;
-    
+
     for (let i = 0; i <= samples; i++) {
       const distance = i / samples;
       const pathPoint = pathRef.current.getPointAtLength(distance * totalLength);
       const currentDistance = Math.hypot(pathPoint.x - point.x, pathPoint.y - point.y);
-      
+
       if (currentDistance < closestDistance) {
         closestDistance = currentDistance;
         bestPosition = distance;
       }
     }
-    
+
     return bestPosition;
   };
 
@@ -69,14 +69,14 @@ const Timeline = () => {
         setPacmanProgress(prev => {
           // Slower speed for more precise movement
           const newProgress = prev + 0.001;
-          
+
           // Check if we've reached the target with some tolerance
           if (Math.abs(newProgress - targetPosition) < 0.01) {
             setIsAnimating(false);
             setIsJumping(true);
             return targetPosition;
           }
-          
+
           // Ensure we don't exceed the target position
           return Math.min(newProgress, targetPosition);
         });
@@ -98,14 +98,14 @@ const Timeline = () => {
       let jumpTime = 0;
       const jumpDuration = 500;
       const maxJumpHeight = -30;
-      
+
       const jumpAnimation = () => {
         jumpTime += 16;
         const progress = jumpTime / jumpDuration;
-        
+
         const height = Math.sin(progress * Math.PI) * maxJumpHeight;
         setJumpOffset(height);
-        
+
         if (jumpTime < jumpDuration) {
           requestAnimationFrame(jumpAnimation);
         } else {
@@ -113,7 +113,7 @@ const Timeline = () => {
           setJumpOffset(0);
         }
       };
-      
+
       requestAnimationFrame(jumpAnimation);
     }
   }, [isJumping]);
@@ -175,7 +175,7 @@ const Timeline = () => {
   };
 
   return (
-    <div className='Timeline'>
+    <div className='FontChange'>
 
 
       <div className="w-full h-[80vh] overflow-x-hidden overflow-y-auto bg-gradient-to-br from-yellow-100 to-yellow-200 relative">
@@ -253,7 +253,7 @@ const Timeline = () => {
                 }
               >
                 <rect
-                  width={isMobile ? "250" : "200"}
+                  width={isMobile ? "250" : "150"}
                   height="80"
                   rx="8"
                   fill="#6D28D9"
@@ -278,8 +278,8 @@ const Timeline = () => {
                 <text
                   x="10"
                   y="65"
-                  style={{ fill: "white", fontWeight: "bold" }}
-                  className="text-[2px] md:text-[2px]"
+                  style={{ fill: "white", fontWeight: "bold", fontFamily: "Agdasima, sans-serif", fontSize: "8px" }}
+                  className="text-[4px] md:text-[4px]"
                 >
                   {point.description}
                 </text>
