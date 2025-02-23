@@ -22,6 +22,7 @@ import sowmi from "../../assets/ragul_sowmi.jpg";
 import bhuvaneswari from "../../assets/bhuvaneswari.jpg";
 import nithish from "../../assets/Nithish.jpg";
 import varun from "../../assets/Varun.jpg";
+import nandha from "../../assets/Nandha Kumar P.jpg";
 
 const teamMembers = [
   {
@@ -94,8 +95,7 @@ const teamMembers = [
     id: 10,
     name: "Nandha Kumar P",
     role: "DESIGN TEAM LEAD",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: nandha,
     linkedIn: "#",
   },
   {
@@ -240,7 +240,7 @@ const teamMembers = [
   },
   {
     id: 30,
-    name: "Gokula Sarathy PS",
+    name: "Farheen Tabassum H",
     role: "DESIGN TEAM",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
