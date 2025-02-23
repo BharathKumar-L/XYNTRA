@@ -1,11 +1,11 @@
-.prize{
+.prize {
     display: flex;
     flex-direction: row;
     gap: 30px;
     align-items: flex-start;
 }
 
-.prizee{
+.prizee {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -13,12 +13,12 @@
     gap: 30px;
 }
 
-.prize-title{
+.prize-title {
     font-size: xx-large;
-    color: aliceblue;
+    color: #ebad17;
 }
 
-.prize-card{
+.prize-card {
     display: flex;
     gap: 30px;
     flex-direction: column;
@@ -26,6 +26,46 @@
     place-items: center;
 }
 
-.sprize,.tprize{
+.prize-span {
+    margin: 0 auto;
+}
+
+
+.sprize,
+.tprize {
     margin-top: 100px;
 }
+
+#prize-f {
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 10px rgba(253, 204, 11, 0.6)); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+#prize-f:hover {
+    transform: scale(1.05); 
+    filter: drop-shadow(8px 8px 15px rgba(253, 204, 11, 0.6));
+  }
+  
+#prize-s {
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 10px rgba(255, 252, 239, 0.6)); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+#prize-s:hover {
+    transform: scale(1.05); 
+    filter: drop-shadow(8px 8px 15px rgba(255, 255, 255, 0.6));
+  }
+  
+#prize-t {
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 10px rgba(253, 108, 11, 0.6)); 
+    transition: transform 0.3s ease-in-out;
+  }
+  
+#prize-t:hover {
+    transform: scale(1.05); 
+    filter: drop-shadow(8px 8px 15px rgba(253, 108, 11, 0.6));
+  }
+  

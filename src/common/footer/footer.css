@@ -1,9 +1,20 @@
 .footer{
-    width: 98vw;
     padding: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(30px);
     margin-bottom: 0;
+}
+
+.contact{
+    padding: 2%;
+    width: 50%;
+    place-items: center;
+}
+
+.partt{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
 }
 
 .logofooter{
@@ -14,7 +25,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20%;
+    gap: 1% ;
 }
 
 .creators{
@@ -27,7 +38,9 @@
     margin-bottom: 20px;
     font-size: 2rem;
 }
-.creators > h3{
+.creators > h3 > .linked{
+    text-decoration: none;
+    color:wheat;
     font-size: 1.5rem;
 }
 
@@ -49,11 +62,21 @@
     gap: 15%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     .footer {
-        width: 100vw;
         padding: 20px;
         text-align: center;
+    }
+
+    .contact {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .partt {
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
     }
 
     .logofooter {
@@ -62,31 +85,85 @@
 
     .footercontent {
         flex-direction: column;
-        align-items: center;
         gap: 20px;
+        align-items: center;
     }
 
     .creators {
         margin-top: 20px;
-        align-items: center;
+        text-align: center;
     }
 
     .creators > h1 {
         font-size: 1.5rem;
     }
 
-    .creators > h3 {
+    .creators > h3 > .linked {
         font-size: 1.2rem;
     }
 
     .icons {
         width: 100%;
+        flex-direction: row;
         gap: 15px;
-        flex-wrap: wrap;
+        justify-content: center;
     }
 
     .logos {
-        flex-wrap: wrap;
-        gap: 10%;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .contact {
+        width: 90%;
+        padding: 5%;
+    }
+
+    .partt {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .logofooter {
+        width: 50%;
+    }
+
+    .footercontent {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .creators {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .creators > h1 {
+        font-size: 1.5rem;
+    }
+
+    .creators > h3 > .linked {
+        font-size: 1.2rem;
+    }
+
+    .icons {
+        width: 100%;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .logos {
+        flex-direction: column;
+        gap: 10px;
     }
 }
