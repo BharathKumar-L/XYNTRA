@@ -29,9 +29,9 @@
 .navbar.scrolled {
   position: fixed;
   top: 20px;
-  left: 6%; 
+  left: 20%; 
   z-index: 500;
-  width: 86%;
+  width: 60%;
   background-color: rgba(68, 66, 74, 0.3); 
   border: 2px solid rgba(69, 30, 209, 0.75);
   box-shadow: 0 4px 15px rgba(69, 30, 209, 0.75);
@@ -47,7 +47,7 @@
 }
 
 .navbar-nav .nav-link:hover {
-  color: #8c52ff; /* Neon pink effect */
+  color: #8c52ff;
 }
 
 .navbar.scrolled .navbar-nav .nav-link{
@@ -56,7 +56,7 @@
 }
 
 .navbar-nav .nav-link {
-  font-size: 1.2rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #8c52ff;
   transition: all 0.3s ease-in-out;

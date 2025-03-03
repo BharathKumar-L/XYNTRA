@@ -7,7 +7,6 @@ import Team from "./common/team/Team";
 import Registration from "./common/Registration/index";
 import ParticleBackground from "./common/bg/ParticleBackground";
 import "./App.css";
-import Contact from "./common/contact/Contact";
 import { useEffect } from "react";
 import AnimatedCursor from "react-animated-cursor"
 import Footer from "./common/footer/footer";
@@ -87,7 +86,6 @@ function App() {
             <Route path="/time" element={<Timeline />} />
             <Route path="/live" element={<Live />} />
             <Route path="/team" element={<Team />} />
-            <Route path="/contact" element={<Contact />} />
             <Route path="/register" element={<Registration />} />
           </Routes>
         </div>

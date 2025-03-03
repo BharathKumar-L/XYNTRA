@@ -17,6 +17,7 @@
   flex-wrap: wrap;
   gap: 80px;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .card2 {
@@ -81,10 +82,15 @@
   background-color: rgba(255, 255, 255, 0.3);
 }
 @media (max-width: 768px) {
-    .team-page{
-        padding: 0;
-        margin-bottom: 40px;
-    }
+  .team-page{
+      padding: 0;
+      margin-bottom: 40px;
+  }
+
+  .team-page h1 {
+    font-size: 28px;
+  }
+
   .team {
     gap: 20px;
     justify-content: center;
@@ -115,10 +121,15 @@
 }
 
 @media (max-width: 480px) {
-    .team-page{
-        padding: 0;
-        margin-bottom: 40px;
-    }
+  .team-page{
+      padding: 0;
+      margin-bottom: 40px;
+  }
+
+  .team-page h1 {
+    font-size: 28px;
+  }
+  
   .team {
     gap: 20px;
     justify-content: center;

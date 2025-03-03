@@ -65,14 +65,6 @@ const Navbar = () => {
                   Team
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  className="nav-link fs-3 nav-container-color"
-                  to="/contact"
-                >
-                  Contact Us
-                </Link>
-              </li>
             </ul>
           </div>
         </div>

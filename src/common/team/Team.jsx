@@ -23,6 +23,15 @@ import bhuvaneswari from "../../assets/bhuvaneswari.jpg";
 import nithish from "../../assets/Nithish.jpg";
 import varun from "../../assets/Varun.jpg";
 import nandha from "../../assets/Nandha Kumar P.jpg";
+import treasurer from "../../assets/deepiga.jpg"
+import harsha from "../../assets/Harsha.jpg";
+import swathi from "../../assets/swathi.jpg";
+import vishwa from "../../assets/vishwa.jpg";
+import farheen from "../../assets/farheen.jpg";
+import roshini from "../../assets/roshini.jpg";
+import bharath_b from "../../assets/bharath_b.jpg";
+import ramalingam from "../../assets/Ramalingam.png";
+import himesh from "../../assets/Himeshwar.jpg";
 
 const teamMembers = [
   {
@@ -50,8 +59,7 @@ const teamMembers = [
     id: 4,
     name: "Deepiga Dharshini C",
     role: "TREASURER",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: treasurer,
     linkedIn: "https://www.linkedin.com/in/deepiga-dharshini-ts20",
   },
   {
@@ -65,8 +73,7 @@ const teamMembers = [
     id: 6,
     name: "Roshini D",
     role: "WEB DEVELOPMENT LEAD",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: roshini,
     linkedIn: "#",
   },
   {
@@ -75,7 +82,7 @@ const teamMembers = [
     role: "APP DEVELOPMENT LEAD",
     image:
       "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/amrutha-b-j-22244828a/",
   },
   {
     id: 8,
@@ -123,8 +130,7 @@ const teamMembers = [
     id: 14,
     name: "Sri Harshavardhanan R",
     role: "APP DEVELOPMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: harsha,
     linkedIn: "https://www.linkedin.com/in/hvardhanan/",
   },
   {
@@ -159,16 +165,14 @@ const teamMembers = [
     id: 19,
     name: "Bharath B",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    image: bharath_b,
+    linkedIn: "https://www.linkedin.com/in/bharath-b-196a4a308/",
   },
   {
     id: 20,
     name: "Swathi G",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: swathi,
     linkedIn: "#",
   },
   {
@@ -203,16 +207,14 @@ const teamMembers = [
     id: 25,
     name: "Vishwa J",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: vishwa,
     linkedIn: "#",
   },
   {
     id: 26,
     name: "Ramalingam S",
     role: "EVENT MANAGEMENT TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: ramalingam,
     linkedIn: "#",
   },
   {
@@ -226,8 +228,7 @@ const teamMembers = [
     id: 28,
     name: "Himeshwar N",
     role: "EVENT MANAGEMENT - PR TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: himesh,
     linkedIn: "#",
   },
   {
@@ -242,8 +243,7 @@ const teamMembers = [
     id: 30,
     name: "Farheen Tabassum H",
     role: "DESIGN TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: farheen,
     linkedIn: "https://www.linkedin.com/in/gokula-sarathy-p-s-8343121b8",
   },
   {
@@ -271,10 +271,75 @@ const teamMembers = [
   }
 ];
 
+const faculty_coordinators = [
+  {
+    id: 34,
+    name : "Dr.S.VinodhKumar",
+    role: "FACULTY COORDINATOR",
+    image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    linkedIn: "#",
+  },
+  {
+    id: 35,
+    name: "Dr.N.DuraiMurugan",
+    role: "FACULTY COORDINATOR",
+    image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    linkedIn: "#",
+  },
+  {
+    id: 36,
+    name: "Dr.K.Anantajyothi",
+    role: "FACULTY COORDINATOR",
+    image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    linkedIn: "#",
+  }
+];
+
 const Team = () => {
   return (
     <div className="team-page">
       <h1>Meet Our Team</h1>
+      <h1>CONVENOR</h1>
+      <div className="team">
+          <div className="card2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="convenor" className="profile-pic" />
+            <div className="card-content">
+              <h2>Dr.P.Kumar</h2>
+              <h3>Convenor</h3>
+              <a href="#" target="_blank" rel="noreferrer">
+                Connect on LinkedIn
+                <img
+                  width={30}
+                  className="my-auto"
+                  src= {linkedin}
+                  style={{ display: "inline" }}
+                />
+              </a>
+            </div>
+          </div>
+      </div>
+      <h1>FACULTY COORDINATORS</h1>
+      <div className="team">
+        {faculty_coordinators.map((member) => (
+          <div key={member.id} className="card2">
+            <img src={member.image} alt={member.name} className="profile-pic" />
+            <div className="card-content">
+              <h2>{member.name}</h2>
+              <h3>{member.role}</h3>
+              <a href={member.linkedIn}  target="_blank" rel="noreferrer">
+                Connect on LinkedIn
+                <img
+                  width={30}
+                  className="my-auto"
+                  src={linkedin}
+                  style={{ display: "inline" }}
+                />
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+      <h1>STUDENT COORDINATORS</h1>
       <div className="team">
         {teamMembers.map((member) => (
           <div key={member.id} className="card2">

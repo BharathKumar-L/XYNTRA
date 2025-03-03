@@ -221,12 +221,12 @@
         }
       },
       "color": {
-        "value": "#ff0000",
+        "value": "#8c52ff",
         "animation": {
           "h": {
             "count": 0,
             "enable": true,
-            "speed": 50,
+            "speed": 90,
             "decay": 0,
             "delay": 0,
             "sync": false,
@@ -496,7 +496,7 @@
       "links": {
         "blink": false,
         "color": {
-          "value": "random"
+          "value": "#8c52ff"
         },
         "consent": false,
         "distance": 150,

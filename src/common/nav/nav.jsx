@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
@@ -27,11 +27,6 @@ const CircularNavbar = () => {
           <li className="cnav-item">
             <Link to="/team" className="cnav-link">
               👥
-            </Link>
-          </li>
-          <li className="cnav-item">
-            <Link to="/contact" className="cnav-link">
-              📞
             </Link>
           </li>
           <li className="cnav-item">

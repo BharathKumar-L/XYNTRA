@@ -39,41 +39,6 @@
   margin-top: 20px;
 }
 
-.contact-content {
-  padding-bottom: 20px;
-}
-
-.contact-content h2 {
-  font-size: 18px;
-  font-weight: 600;
-  color: #00ffcc;
-  text-shadow: 0 0 10px #00ffcc;
-  margin: 12px 0 12px 0;
-}
-
-.contact-content h3 {
-  font-size: 16px;
-  font-weight: 400;
-  color: #7f8c8d;
-  margin-bottom: 15px;
-}
-
-.contact-content a {
-  display: inline-block;
-  text-decoration: none;
-  color: hsl(0, 0%, 100%);
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color 0.3s ease;
-}
-
-.contact-content a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
 @media (max-width: 768px) {
   .contact-team {
     gap: 20px;

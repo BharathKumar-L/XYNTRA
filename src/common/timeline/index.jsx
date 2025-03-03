@@ -19,7 +19,7 @@ const Timeline = () => {
   useEffect(() => {
     setIsVisible(true);
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 920);
     };
 
     checkMobile();
@@ -176,8 +176,6 @@ const Timeline = () => {
 
   return (
     <div className='FontChange'>
-
-
       <div className="w-full h-[80vh] overflow-x-hidden overflow-y-auto bg-gradient-to-br from-yellow-100 to-yellow-200 relative">
         <svg
           viewBox={isMobile ? "0 0 500 800" : "0 0 1300 500"}

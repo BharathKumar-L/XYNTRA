@@ -16,7 +16,7 @@ const Prize = () => {
             style={{ width: '225px' }}
             src={second} className='prize-img' id='prize-s' alt="2nd prize" />
           <h1 className='prize-title'>
-            2nd Prize
+            2nd Prize <p className='amt'>₹8,000</p>
           </h1>
         </div>
       </PixelCard>
@@ -26,7 +26,7 @@ const Prize = () => {
             style={{ width: '225px' }}
             src={first} className='prize-img' id='prize-f' alt="1st prize" />
           <h1 className='prize-title'>
-            1st Prize <br /> <span className='prize-span'>₹15,000</span>
+            1st Prize <p className='amt'>₹15,000</p>
           </h1>
         </div>
       </PixelCard>
@@ -36,7 +36,7 @@ const Prize = () => {
             style={{ width: '225px' }}
             src={third} className='prize-img' id='prize-t' alt="3rd prize" />
           <h1 className='prize-title'>
-            3rd Prize
+            3rd Prize <p className='amt'>₹5,000</p>
           </h1>
         </div>
       </PixelCard>

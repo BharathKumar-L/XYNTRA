@@ -20,7 +20,7 @@
 .file{
   transform: translateY(100%) rotate(-90deg);
   position: fixed;
-  right: -138px;
+  right: -105px;
   display: flex;
   flex-direction: row;
   gap: 30px;

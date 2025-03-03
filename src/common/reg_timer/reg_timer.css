@@ -73,6 +73,9 @@
         width: 140px;
         padding: 8px 16px;
     }
+    #logo-img{
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1920px) {
@@ -113,15 +116,15 @@
 @media screen and (max-width: 768px) {
 
     .timer {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .time {
-        font-size: 4rem;
+        font-size: 2.5rem;
     }
 
     .label {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .time-section {
@@ -130,31 +133,39 @@
         padding: 5px 10px;
     }
 
+    .countdown-container{
+        margin-top: 70%;
+        margin-bottom: 50%;
+    }
+
     .colon {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .expired-text {
         font-size: 4rem;
+    }
+    #logo-img{
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 480px) {
 
     .timer {
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
     .time {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .label {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .time-section {
-        width: 100px;
+        width: 90px;
         padding: 5px;
     }
 

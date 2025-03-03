@@ -1,9 +1,9 @@
 .cnav-container {
   position: fixed;
-  left: 0;
+  left: 10px; /* Adjust as needed */
   top: 50%;
   transform: translateY(-50%);
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .cnav-navbar {
@@ -77,26 +77,21 @@
 }
 
 .cnav-item:nth-child(1) {
-  transform: translate(-50%, -50%) rotate(0deg) translate(60px) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(-68deg) translate(60px) rotate(68deg);
 }
 
 .cnav-item:nth-child(2) {
-  transform: translate(-50%, -50%) rotate(72deg) translate(60px) rotate(-72deg);
+  transform: translate(-50%, -50%) rotate(-13deg) translate(60px) rotate(13deg);
 }
 
 .cnav-item:nth-child(3) {
-  transform: translate(-50%, -50%) rotate(144deg) translate(60px)
-    rotate(-144deg);
+  transform: translate(-50%, -50%) rotate(38deg) translate(60px)
+    rotate(-38deg);
 }
 
 .cnav-item:nth-child(4) {
-  transform: translate(-50%, -50%) rotate(216deg) translate(60px)
-    rotate(-216deg);
-}
-
-.cnav-item:nth-child(5) {
-  transform: translate(-50%, -50%) rotate(288deg) translate(60px)
-    rotate(-288deg);
+  transform: translate(-50%, -50%) rotate(93deg) translate(60px)
+    rotate(-93deg);
 }
 
 .cnav-link {
