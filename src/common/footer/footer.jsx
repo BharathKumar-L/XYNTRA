@@ -1,8 +1,8 @@
 import './footer.css'
 import React from 'react'
 import logo from '../../assets/logo.png'
-import reclogo from '../../assets/rec_logo.png'
-import cslogo from '../../assets/cs_logo_white.png'
+import reclogo from '../../assets/rec.png'
+import cslogo from '../../assets/cslogo.png'
 import RecMap from '../../recmap'
 
 const Footer = () => {
