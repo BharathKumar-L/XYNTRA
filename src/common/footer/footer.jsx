@@ -1,7 +1,7 @@
 import './footer.css'
 import React from 'react'
 import logo from '../../assets/logo.png'
-import reclogo from '../../assets/rec_logo.png'
+import reclogo from '../../assets/REC_LOGO.png'
 import cslogo from '../../assets/cs_logo_white.png'
 import RecMap from '../../recmap'
 
