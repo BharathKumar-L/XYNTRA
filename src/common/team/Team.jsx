@@ -289,7 +289,7 @@ const faculty_coordinators = [
   },
   {
     id: 36,
-    name: "Dr.K.Anantajyothi",
+    name: "Dr.K.Anantajothi",
     role: "FACULTY COORDINATOR",
     image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "#",
@@ -314,6 +314,7 @@ const Team = () => {
                   className="my-auto"
                   src= {linkedin}
                   style={{ display: "inline" }}
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -334,6 +335,7 @@ const Team = () => {
                   className="my-auto"
                   src={linkedin}
                   style={{ display: "inline" }}
+                  loading="lazy"
                 />
               </a>
             </div>
@@ -355,6 +357,7 @@ const Team = () => {
                   className="my-auto"
                   src={linkedin}
                   style={{ display: "inline" }}
+                  loading="lazy"
                 />
               </a>
             </div>
