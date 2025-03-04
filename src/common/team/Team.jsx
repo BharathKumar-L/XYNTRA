@@ -30,7 +30,7 @@ import vishwa from "../../assets/vishwa.jpg";
 import farheen from "../../assets/farheen.jpg";
 import roshini from "../../assets/roshini.jpg";
 import bharath_b from "../../assets/bharath_b.jpg";
-import ramalingam from "../../assets/Ramalingam.png";
+import ramalingam from "../../assets/Ramalingam.jpg";
 import himesh from "../../assets/Himeshwar.jpg";
 
 const teamMembers = [
