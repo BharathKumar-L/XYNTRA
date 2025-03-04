@@ -18,6 +18,14 @@
   color: #ebad17;
 }
 
+.prize-title-silver{
+  font-size: xx-large;
+  color: #C0C0C0;
+}
+.prize-title-bronze{
+  font-size: xx-large;
+  color: #CD7F32;
+}
 .prize-card {
   display: flex;
   gap: 30px;
