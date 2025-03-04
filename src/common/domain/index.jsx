@@ -3,7 +3,10 @@ import TiltedCard from "./Titlecard";
 import "./Domains.css"; // Import CSS file
 import Healthcare from '../../assets/DigitalHealthcare.jpg'
 import Defense from '../../assets/Defense.jpg'
-import blockchain from '../../assets/blockchain.webp'
+import edTech from '../../assets/edtech.jpg'
+import fintech from '../../assets/fintech.png'
+import questonmark from '../../assets/questonmark.webp'
+ 
 const Domains = () => {
     return (
         <>
@@ -28,8 +31,8 @@ const Domains = () => {
                 />
                                <TiltedCard
                     imageSrc={Defense}
-                    altText="militaryr"
-                    captionText="military"
+                    altText="Defense"
+                    captionText="Defense"
                     containerHeight="300px"
                     containerWidth="300px"
                     imageHeight="300px"
@@ -44,9 +47,9 @@ const Domains = () => {
                     }
                 />
                                <TiltedCard
-                    imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-                    altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="Kendrick Lamar - GNX"
+                    imageSrc={edTech}
+                    altText="EdTech"
+                    captionText="EdTech"
                     containerHeight="300px"
                     containerWidth="300px"
                     imageHeight="300px"
@@ -57,13 +60,13 @@ const Domains = () => {
                     showTooltip={true}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="overlay-text">Kendrick Lamar - GNX</p>
+                        <p className="overlay-text">EdTech</p>
                     }
                 />
                                <TiltedCard
-                    imageSrc={blockchain}
-                    altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="Kendrick Lamar - GNX"
+                    imageSrc={fintech}
+                    altText="Open Domain"
+                    captionText="Open Domain"
                     containerHeight="300px"
                     containerWidth="300px"
                     imageHeight="300px"
@@ -74,13 +77,13 @@ const Domains = () => {
                     showTooltip={true}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="overlay-text">Kendrick Lamar - GNX</p>
+                        <p className="overlay-text">Fintech and Blockchain</p>
                     }
                 />
                                <TiltedCard
-                    imageSrc="https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58"
-                    altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="Kendrick Lamar - GNX"
+                    imageSrc={questonmark}
+                    altText="Open Domain"
+                    captionText="Open Domain"
                     containerHeight="300px"
                     containerWidth="300px"
                     imageHeight="300px"
@@ -91,7 +94,7 @@ const Domains = () => {
                     showTooltip={true}
                     displayOverlayContent={true}
                     overlayContent={
-                        <p className="overlay-text">Kendrick Lamar - GNX</p>
+                        <p className="overlay-text">Open Domain</p>
                     }
                 />
             </div>

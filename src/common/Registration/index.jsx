@@ -1,7 +1,7 @@
 import React from 'react';
 import './Registration.css';
 import FlowingMenu from './submit'
-import unstop from '../../assets/unstoplogo.png'
+import unstop from '../../assets/unstop.png'
 const Register = () => {
   const demoItems = [
     { link: '#', text: 'Register Now', image: unstop },

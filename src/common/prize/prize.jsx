@@ -15,7 +15,7 @@ const Prize = () => {
           <img
             style={{ width: '225px' }}
             src={second} className='prize-img' id='prize-s' alt="2nd prize" />
-          <h1 className='prize-title'>
+          <h1 className='prize-title-silver'>
             2nd Prize <p className='amt'>₹8,000</p>
           </h1>
         </div>
@@ -35,7 +35,7 @@ const Prize = () => {
           <img
             style={{ width: '225px' }}
             src={third} className='prize-img' id='prize-t' alt="3rd prize" />
-          <h1 className='prize-title'>
+          <h1 className='prize-title-bronze'>
             3rd Prize <p className='amt'>₹5,000</p>
           </h1>
         </div>
