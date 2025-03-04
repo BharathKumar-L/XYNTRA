@@ -57,7 +57,7 @@ const Navbar = () => {
                   className="nav-link fs-4 nav-container-color"
                   to="/register"
                 >
-                  REGISTER
+                  Register
                 </Link>
               </li>
               <li className="nav-item">

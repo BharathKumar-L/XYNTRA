@@ -132,13 +132,13 @@ const Timeline = () => {
   }, [pacmanProgress, pathLength]);
 
   const timelinePoints = [
-    { id: 1, year: 2020, title: "Jou", description: "Registration Open", x: isMobile ? 150 : 100, y: isMobile ? 100 : 250, icon: List },
-    { id: 2, year: 2021, title: "Mysterious Island", description: "Registration Closed", x: isMobile ? 150 : 250, y: isMobile ? 200 : 150, icon: ListCheck },
-    { id: 3, year: 2022, title: "Ancient Temple", description: "Shortlisted Teams Announce", x: isMobile ? 150 : 400, y: isMobile ? 300 : 350, icon: UserCheck },
-    { id: 4, year: 2023, title: "Hidden Cove", description: "Round 2 Payment", x: isMobile ? 150 : 550, y: isMobile ? 400 : 180, icon: Banknote },
-    { id: 5, year: 2024, title: "Lost City", description: "Round 2 Registration Stops", x: isMobile ? 150 : 700, y: isMobile ? 500 : 400, icon: Lock },
-    { id: 6, year: 2025, title: "Dragon's Lair", description: "Hackathon Starts", x: isMobile ? 150 : 850, y: isMobile ? 600 : 200, icon: Timer },
-    { id: 7, year: 2026, title: "Treasure Chamber", description: "Hackathon Ends", x: isMobile ? 150 : 1000, y: isMobile ? 700 : 300, icon: TimerOff }
+    { id: 1, year: 2025, title: "March 5", description: "Registration Open", x: isMobile ? 150 : 80, y: isMobile ? 100 : 250, icon: List },
+    { id: 2, year: 2025, title: "March 18", description: "Registration Closed", x: isMobile ? 150 : 250, y: isMobile ? 200 : 150, icon: ListCheck },
+    { id: 3, year: 2025, title: "March 25", description: "Shortlist Announced", x: isMobile ? 150 : 400, y: isMobile ? 300 : 350, icon: UserCheck },
+    { id: 4, year: 2025, title: "March 26", description: "Round 2 Payment", x: isMobile ? 150 : 550, y: isMobile ? 400 : 180, icon: Banknote },
+    { id: 5, year: 2025, title: "March 30", description: "Round 2 Reg Ends", x: isMobile ? 150 : 700, y: isMobile ? 500 : 400, icon: Lock },
+    { id: 6, year: 2025, title: "April 4", description: "Hackathon Starts", x: isMobile ? 150 : 850, y: isMobile ? 600 : 200, icon: Timer },
+    { id: 7, year: 2025, title: "April 6", description: "Hackathon Ends", x: isMobile ? 150 : 1000, y: isMobile ? 700 : 300, icon: TimerOff }
   ];
 
   const getPath = () => {
@@ -251,7 +251,7 @@ const Timeline = () => {
                 }
               >
                 <rect
-                  width={isMobile ? "250" : "150"}
+                  width={isMobile ? "250" : "170"}
                   height="80"
                   rx="8"
                   fill="#6D28D9"
@@ -276,7 +276,7 @@ const Timeline = () => {
                 <text
                   x="10"
                   y="65"
-                  style={{ fill: "white", fontWeight: "bold", fontFamily: "Agdasima, sans-serif", fontSize: "8px" }}
+                  style={{ fill: "white", fontWeight: "bold", fontFamily: "Agdasima, sans-serif", fontSize: "16px" }}
                   className="text-[4px] md:text-[4px]"
                 >
                   {point.description}

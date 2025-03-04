@@ -8,6 +8,7 @@ import Regtimer from '../../common/reg_timer/reg_timer';
 import FAQ from '../../common/faq';
 import Regbutton from '../../common/button/reg-button';
 import Prize from '../../common/prize/prize';
+import Domains from '../../common/domain';
 
 function Home() {
     return (
@@ -16,6 +17,7 @@ function Home() {
             <Regtimer />
             <Regbutton />
             <Prize />
+            <Domains/>
             <FAQ />
         </div>
     );

@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.image-container img {
+    border-radius: 15px;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    /* Margin from left */
+    background: rgba(0, 0, 0, 0.6);
+    /* Translucent background */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 12px;
+    /* Rounded corners for text box */
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 2;
+    /* Ensures text stays above the image */
+}
+
+.text_domain {
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}

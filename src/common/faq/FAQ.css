@@ -1,27 +1,38 @@
-.container {
+/* FAQ Section */
+#faq .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
 }
 
-h2.faq-title {
+#faq h2.faq-title {
     text-align: center;
     margin-bottom: 40px;
     font-size: 36px;
     color: #f5f6fa;
 }
 
-.faq-section {
+#faq .faq-section {
     padding: 40px 0;
 }
 
-.accordion {
+#faq .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#faq .faq-column {
+    width: 48%;
+}
+
+#faq .accordion1 {
     background-color: transparent;
     border-radius: 8px;
     padding: 10px;
 }
 
-.accordion-item {
+#faq .accordion1-item {
     background-color: #333;
     margin-bottom: 10px;
     border-radius: 8px;
@@ -30,8 +41,11 @@ h2.faq-title {
     transition: all 0.3s ease-in-out;
 }
 
-.accordion-button {
-    font-family: "Teko", sans-serif !important;
+#faq .accordion1-button:hover {
+    background-color: #000000;
+}
+
+#faq .accordion1-button {
     width: 100%;
     padding: 15px;
     font-size: 18px;
@@ -41,20 +55,24 @@ h2.faq-title {
     color: #fff;
     display: flex;
     justify-content: space-between;
+    /* Ensures space between text and icon */
     align-items: center;
     transition: background-color 0.3s ease;
     position: relative;
 }
 
-.accordion-icon {
+#faq .accordion1-icon {
     font-size: 20px;
     font-weight: bold;
     margin-left: auto;
+    /* Pushes the icon to the right */
     position: absolute;
     right: 15px;
+    /* Aligns the icon to the far right with padding */
     transition: transform 0.3s ease;
 }
-.accordion-content {
+
+#faq .accordion1-content {
     max-height: 0;
     overflow: hidden;
     background-color: #444;
@@ -63,11 +81,12 @@ h2.faq-title {
     line-height: 1.6;
 }
 
-.accordion-content.show {
+#faq .accordion1-content.show {
     max-height: 500px;
+    /* Adjust as needed */
 }
 
-.accordion-content p {
+#faq .accordion1-content p {
     margin: 10px 0;
     padding: 5px 10px;
     font-size: 18px !important;
@@ -76,32 +95,9 @@ h2.faq-title {
     text-align: justify;
 }
 
-
-@media (max-width: 769px) {
-    .accordion-item {
+@media(max-width: 768px) {
+    #faq .faq-column {
         width: 100%;
-    }
-    .container{
-        width: 98vw;
-    }
-    .accordion {
-        width: 50%;
-    }
-}
-@media (max-width: 1024px) {
-    .accordion-item {
-        width: 100%;
-    }
-    .container{
-        width: 98vw;
-    }
-    .accordion {
-        width: 100%;
-    }
-}
-
-@media (min-width: 1601px) {
-    .accordion-item {
-        width: 100%;
+        margin-bottom: 20px;
     }
 }
