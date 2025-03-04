@@ -32,6 +32,9 @@ import roshini from "../../assets/roshini.jpg";
 import bharath_b from "../../assets/bharath_b.jpg";
 import ramalingam from "../../assets/Ramalingam.jpg";
 import himesh from "../../assets/Himeshwar.jpg";
+import srivarshni from "../../assets/Srivarshni.jpeg";
+import gokul from "../../assets/gokul.jpg";
+import amrutha from "../../assets/Amrutha.jpg";
 
 const teamMembers = [
   {
@@ -45,7 +48,7 @@ const teamMembers = [
     id: 2,
     name: "Gokulasarathy P S",
     role: "VICE CHAIRMAN",
-    image: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: gokul,
     linkedIn: "https://www.linkedin.com/in/gokula-sarathy-p-s-8343121b8",
   },
   {
@@ -74,14 +77,13 @@ const teamMembers = [
     name: "Roshini D",
     role: "WEB DEVELOPMENT LEAD",
     image: roshini,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/roshini-d-33a851257/",
   },
   {
     id: 7,
     name: "Amrutha B J",
     role: "APP DEVELOPMENT LEAD",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: amrutha,
     linkedIn: "https://www.linkedin.com/in/amrutha-b-j-22244828a/",
   },
   {
@@ -96,28 +98,28 @@ const teamMembers = [
     name: "Ragul Sowmiyanarayanan G K",
     role: "EVENT MANAGEMENT LEAD",
     image:sowmi,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/ragul-sowmiyanarayanan-gk-983a42255/",
   },
   {
     id: 10,
     name: "Nandha Kumar P",
     role: "DESIGN TEAM LEAD",
     image: nandha,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/nandha-kumar-p-1627b6257/",
   },
   {
     id: 11,
     name: "Nithish Rao P",
     role: "WEB DEVELOPMENT TEAM",
     image:nithish,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/nithish-rao-p/",
   },
   {
     id: 12,
     name: "Varun G",
     role: "WEB DEVELOPMENT TEAM",
     image: varun,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/varun-g-6b08a9259/",
   },
   {
     id: 13,
@@ -173,7 +175,7 @@ const teamMembers = [
     name: "Swathi G",
     role: "EVENT MANAGEMENT TEAM",
     image: swathi,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/swathi-g-45bb1b2b2/",
   },
   {
     id: 21,
@@ -194,7 +196,7 @@ const teamMembers = [
     name: "Dinisha R",
     role: "EVENT MANAGEMENT TEAM",
     image: dinisha,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/dinisha20",
   },
   {
     id: 24,
@@ -208,14 +210,14 @@ const teamMembers = [
     name: "Vishwa J",
     role: "EVENT MANAGEMENT TEAM",
     image: vishwa,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/vishwa-j-5019112a2/",
   },
   {
     id: 26,
     name: "Ramalingam S",
     role: "EVENT MANAGEMENT TEAM",
     image: ramalingam,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/ramalingamsankaranarayanan/",
   },
   {
     id: 27,
@@ -229,7 +231,7 @@ const teamMembers = [
     name: "Himeshwar N",
     role: "EVENT MANAGEMENT - PR TEAM",
     image: himesh,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/himeshwarnagarajan/",
   },
   {
     id: 29,
@@ -244,14 +246,13 @@ const teamMembers = [
     name: "Farheen Tabassum H",
     role: "DESIGN TEAM",
     image: farheen,
-    linkedIn: "https://www.linkedin.com/in/gokula-sarathy-p-s-8343121b8",
+    linkedIn: "https://www.linkedin.com/in/farheen-tabassum-8526042a2/",
   },
   {
     id: 31,
     name: "Srivarshni S",
     role: "DESIGN TEAM",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: srivarshni,
     linkedIn: "https://www.linkedin.com/in/srivarshni-s-a161042a4/",
   },
   {
@@ -260,14 +261,14 @@ const teamMembers = [
     role: "DESIGN TEAM",
     image:
     "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "www.linkedin.com/in/janani-t-5576002a2",
   },
   {
     id: 33,
     name: "DivyaDharshini K",
     role: "DESIGN TEAM",
     image: divyadharshini,
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/divya-dharshini-k-925832295/",
   }
 ];
 
