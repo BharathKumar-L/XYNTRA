@@ -14,7 +14,6 @@ import Aboutus from '../../common/aboutus/aboutus';
 function Home() {
     return (
         <div className="flex home justify-start">
-            {/* <Hero/> */}
             <Regtimer />
             <Regbutton />
             <Aboutus/>
