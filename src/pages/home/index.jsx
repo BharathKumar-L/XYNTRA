@@ -17,9 +17,9 @@ function Home() {
             {/* <Hero/> */}
             <Regtimer />
             <Regbutton />
-            <Prize />
             <Aboutus/>
             <Domains/>
+            <Prize />
             <FAQ />
         </div>
     );
