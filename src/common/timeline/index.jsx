@@ -10,7 +10,7 @@ const Timeline = () => {
   const [pathLength, setPathLength] = useState(0);
   const [pacmanProgress, setPacmanProgress] = useState(0);
   const [pacmanRotation, setPacmanRotation] = useState(0);
-  const [stopAtPoint, setStopAtPoint] = useState(6);
+  const [stopAtPoint, setStopAtPoint] = useState(1);
   const [isAnimating, setIsAnimating] = useState(true);
   const [isJumping, setIsJumping] = useState(false);
   const [jumpOffset, setJumpOffset] = useState(0);
@@ -175,8 +175,8 @@ const Timeline = () => {
   };
 
   return (
-    <div className='FontChange'>
-      <div className="w-full h-[80vh] overflow-x-hidden overflow-y-auto bg-gradient-to-br from-yellow-100 to-yellow-200 relative">
+    <div className='Timeline'>
+      <div className="w-full mb-[10vh] h-[100vh] overflow-x-hidden overflow-y-auto bg-gradient-to-br from-yellow-100 to-yellow-200 relative">
         <svg
           viewBox={isMobile ? "0 0 500 800" : "0 0 1300 500"}
           className="w-full h-full"
@@ -310,6 +310,8 @@ const Timeline = () => {
           </g>
         </svg>
       </div>
+    <div className='mb-[70vh]'></div>
+
     </div>
   );
 };

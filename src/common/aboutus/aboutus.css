@@ -1,0 +1,45 @@
+.container_aboutus {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+  }
+  
+  /* Left Side - Text Section */
+  .left_ab {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Right Side - Infinite Scroll */
+  .right_ab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .container_aboutus {
+      grid-template-columns: 1fr; /* Single column */
+      grid-template-rows: auto auto; /* Stack items */
+    }
+  
+    /* Infinite Scroll comes first, Text below */
+    .right_ab {
+      order: 1;
+    }
+  
+    .left_ab {
+      order: 2;
+    }
+  }
+  
+  /* Optional: Additional Styling for Center Alignment */
+  .centeralign {
+    text-align: center;
+    margin-top: 10%;
+  }
+  
