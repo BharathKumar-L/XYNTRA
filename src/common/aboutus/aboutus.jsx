@@ -36,7 +36,7 @@ const Aboutus = () => {
         isTilted={true}
         tiltDirection="left"
         autoplay={true}
-        autoplaySpeed={0.1}
+        autoplaySpeed={0.9}
         autoplayDirection="down"
         pauseOnHover={true}
       />
