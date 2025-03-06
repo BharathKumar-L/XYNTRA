@@ -30,9 +30,10 @@
 
 .infinite-scroll-container {
   display: flex;
+  max-width: 100vw;
   flex-direction: column;
   overscroll-behavior: contain;
-  padding-inline: 1rem;
+  padding-inline: 0rem;
   cursor: grab;
   transform-origin: center center;
 }
