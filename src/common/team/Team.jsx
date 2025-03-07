@@ -35,6 +35,7 @@ import himesh from "../../assets/Himeshwar.jpg";
 import srivarshni from "../../assets/Srivarshni.jpeg";
 import gokul from "../../assets/gokul.jpg";
 import amrutha from "../../assets/Amrutha.jpg";
+import janani from "../../assets/janani.jpg";
 
 const teamMembers = [
   {
@@ -259,8 +260,7 @@ const teamMembers = [
     id: 32,
     name: "Janani T",
     role: "DESIGN TEAM",
-    image:
-    "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
+    image: janani,
     linkedIn: "www.linkedin.com/in/janani-t-5576002a2",
   },
   {
