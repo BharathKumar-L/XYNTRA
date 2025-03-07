@@ -1,6 +1,6 @@
 .register-button-container {
   text-align: center;
-  margin-top: 3%;
+  margin-top: 10%;
   margin-bottom: 12%;
 }
 
@@ -13,7 +13,7 @@
   letter-spacing: 4px;
   backdrop-filter: blur(30px);
   border-radius: 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #8e59eb;
   padding: 15px 30px;
   cursor: pointer;

@@ -28,7 +28,7 @@ const Footer = () => {
                 </a>
               </div>
               <div className="contact-content">
-                <h2>Himeshwar N</h2>
+                <h2>Gokulasarathy P S</h2>
                 <a href="tel:+919361575441" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
@@ -36,13 +36,21 @@ const Footer = () => {
             </div>
             <div className="part">
               <div className="contact-content">
-                <h2>Bhuvaneshwari M</h2>
+                <h2>Joderick Sherwin</h2>
                 <a href="tel:+918148184746" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
               </div>
               <div className="contact-content">
-                <h2>Jayadharshini M</h2>
+                <h2>Deepiga Dharshini C</h2>
+                <a href="tel:+917339624803" rel="noreferrer">
+                  <i>📞</i>CALL
+                </a>
+              </div>
+            </div>
+            <div className="part">
+              <div className="contact-content">
+                <h2>Bharath Kumar L</h2>
                 <a href="tel:+917339624803" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
