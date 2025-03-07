@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
               <div className="contact-content">
                 <h2>Gokulasarathy P S</h2>
-                <a href="tel:+919361575441" rel="noreferrer">
+                <a href="tel:+919940013827" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
               </div>
@@ -37,13 +37,13 @@ const Footer = () => {
             <div className="part">
               <div className="contact-content">
                 <h2>Joderick Sherwin</h2>
-                <a href="tel:+918148184746" rel="noreferrer">
+                <a href="tel:+917094944667" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
               </div>
               <div className="contact-content">
                 <h2>Deepiga Dharshini C</h2>
-                <a href="tel:+917339624803" rel="noreferrer">
+                <a href="tel:+918220439219" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
               </div>
@@ -51,7 +51,7 @@ const Footer = () => {
             <div className="part">
               <div className="contact-content">
                 <h2>Bharath Kumar L</h2>
-                <a href="tel:+917339624803" rel="noreferrer">
+                <a href="tel:+916369106579" rel="noreferrer">
                   <i>📞</i>CALL
                 </a>
               </div>
@@ -88,10 +88,10 @@ const Footer = () => {
         </div>
         <div className="creators">
           <h1>Website Developed by</h1>
-          <h3><a href="https://www.linkedin.com/in/bharathkumar-l/" target="_blank" className='linked' rel="noopener noreferrer">Bharath Kumar L</a></h3>
-          <h3><a href="https://www.linkedin.com/in/roshini-d/" target="_blank" className='linked' rel="noopener noreferrer">Roshini D</a></h3>
+          <h3><a href="https://www.linkedin.com/in/bharath-kumar-l-955304289/" target="_blank" className='linked' rel="noopener noreferrer">Bharath Kumar L</a></h3>
+          <h3><a href="https://www.linkedin.com/in/roshini-d-33a851257/" target="_blank" className='linked' rel="noopener noreferrer">Roshini D</a></h3>
           <h3><a href="https://www.linkedin.com/in/nithish-rao-p/" target="_blank" className='linked' rel="noopener noreferrer">Nithish Rao P</a></h3>
-          <h3><a href="https://www.linkedin.com/in/varun-g/" target="_blank" className='linked' rel="noopener noreferrer">Varun G</a></h3>
+          <h3><a href="https://www.linkedin.com/in/varun-g-6b08a9259/" target="_blank" className='linked' rel="noopener noreferrer">Varun G</a></h3>
         </div>
       </div>
     </footer>

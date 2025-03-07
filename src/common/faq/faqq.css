@@ -29,7 +29,6 @@
 #faq .accordion1 {
     background-color: transparent;
     border-radius: 8px;
-    padding: 10px;
 }
 
 #faq .accordion1-item {
@@ -96,8 +95,13 @@
 }
 
 @media(max-width: 768px) {
+
+    #faq h2.faq-title {
+        font-size: 30px;
+    }
+
     #faq .faq-column {
         width: 100%;
-        margin-bottom: 20px;
+        margin: 0;
     }
 }

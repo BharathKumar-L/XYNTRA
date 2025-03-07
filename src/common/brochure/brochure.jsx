@@ -10,15 +10,15 @@ const Brochure = () => {
         download
         className="brochure-button"
       >
-        Brochure
+        Abstract <br /> Template
       </a>
       <a
-      href="#"
-      download
-      className="brochure-button"
-    >
-        Guidelines
-    </a>
+        href={brochure}
+        download
+        className="brochure-button"
+      >
+        Brochure
+      </a>
     </div>
   );
 };

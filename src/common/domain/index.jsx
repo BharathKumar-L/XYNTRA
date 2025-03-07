@@ -65,8 +65,8 @@ const Domains = () => {
                 />
                                <TiltedCard
                     imageSrc={fintech}
-                    altText="Open Domain"
-                    captionText="Open Domain"
+                    altText="Fintech and Blockchain"
+                    captionText="Fintech and Blockchain"
                     containerHeight="300px"
                     containerWidth="300px"
                     imageHeight="300px"

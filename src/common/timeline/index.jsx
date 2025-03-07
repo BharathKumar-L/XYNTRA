@@ -132,13 +132,13 @@ const Timeline = () => {
   }, [pacmanProgress, pathLength]);
 
   const timelinePoints = [
-    { id: 1, year: 2025, title: "March 5", description: "Registration Open", x: isMobile ? 150 : 80, y: isMobile ? 100 : 250, icon: List },
-    { id: 2, year: 2025, title: "March 18", description: "Registration Closed", x: isMobile ? 150 : 250, y: isMobile ? 200 : 150, icon: ListCheck },
+    { id: 1, year: 2025, title: "March 8", description: "Registration Open", x: isMobile ? 150 : 80, y: isMobile ? 100 : 250, icon: List },
+    { id: 2, year: 2025, title: "March 20", description: "Registration Closed", x: isMobile ? 150 : 250, y: isMobile ? 200 : 150, icon: ListCheck },
     { id: 3, year: 2025, title: "March 25", description: "Shortlist Announced", x: isMobile ? 150 : 400, y: isMobile ? 300 : 350, icon: UserCheck },
     { id: 4, year: 2025, title: "March 26", description: "Round 2 Payment", x: isMobile ? 150 : 550, y: isMobile ? 400 : 180, icon: Banknote },
-    { id: 5, year: 2025, title: "March 30", description: "Round 2 Reg Ends", x: isMobile ? 150 : 700, y: isMobile ? 500 : 400, icon: Lock },
-    { id: 6, year: 2025, title: "April 4", description: "Hackathon Starts", x: isMobile ? 150 : 850, y: isMobile ? 600 : 200, icon: Timer },
-    { id: 7, year: 2025, title: "April 6", description: "Hackathon Ends", x: isMobile ? 150 : 1000, y: isMobile ? 700 : 300, icon: TimerOff }
+    { id: 5, year: 2025, title: "March 28", description: "Round 2 Reg Ends", x: isMobile ? 150 : 700, y: isMobile ? 500 : 400, icon: Lock },
+    { id: 6, year: 2025, title: "March 29", description: "Hackathon Starts", x: isMobile ? 150 : 850, y: isMobile ? 600 : 200, icon: Timer },
+    { id: 7, year: 2025, title: "March 30", description: "Hackathon Ends", x: isMobile ? 150 : 1000, y: isMobile ? 700 : 300, icon: TimerOff }
   ];
 
   const getPath = () => {

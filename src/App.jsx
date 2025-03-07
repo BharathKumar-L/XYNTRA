@@ -12,6 +12,7 @@ import AnimatedCursor from "react-animated-cursor"
 import Footer from "./common/footer/footer";
 import CircularNavbar from "./common/nav/nav";
 import Brochure from "./common/brochure/brochure";
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <ParticleBackground id="particle-canvas" />
         <AnimatedCursor

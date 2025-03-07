@@ -27,7 +27,7 @@ const FAQ = () => {
         {
             question: "Are there any registration fees?",
             answer:
-            "Yes, ₹200 per participant is required for Round 2 registration.",
+            "Yes, ₹350 per participant is required for Round 2 registration.",
         },
         {
             question: "Can I participate in more than one team?",
@@ -37,7 +37,7 @@ const FAQ = () => {
         {
             question: "What happens if technical issues arise during the hackathon?",
             answer:
-                "Contact the organizers immediately for prompt resolution.",
+                "Contact the organizers immediately for assistance. We have a dedicated team to ensure a smooth experience.",
         },
         {
             question: "Are pre-developed solutions allowed?",
@@ -64,7 +64,7 @@ const FAQ = () => {
         },
         {
             question: "Do I need to be a student to participate?",
-            answer: "Yes, this hackathon is open to high school and undergraduate students.",
+            answer: "Yes, this hackathon is open to undergraduate students.",
         },
     ];
 
