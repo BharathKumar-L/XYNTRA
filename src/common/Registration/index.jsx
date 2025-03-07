@@ -4,7 +4,7 @@ import FlowingMenu from './submit'
 import unstop from '../../assets/unstop.png'
 const Register = () => {
   const demoItems = [
-    { link: '#', text: 'Register Now', image: unstop },
+    { link: 'https://unstop.com/p/xyntra-rajalakshmi-engineering-college-rec-chennai-1418301', text: 'Register Now', image: unstop },
   ];
   
   return (
