@@ -73,6 +73,8 @@ function MenuItem({ link, text, image }) {
       <a
         className="menu__item-link"
         href={link}
+        target='_blank'
+        rel="noopener noreferrer"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
