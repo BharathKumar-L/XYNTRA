@@ -1,6 +1,6 @@
 import React from "react";
 import './brochure.css'
-import brochure from '../../assets/BROCHURE.pdf'
+import brochure from '../../assets/broch.pdf'
 import abstract from '../../assets/Abstract-Template.docx'
 
 const Brochure = () => {
