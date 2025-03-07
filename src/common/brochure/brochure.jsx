@@ -7,7 +7,7 @@ const Brochure = () => {
   return (
     <div className="file">
       <a
-        href={brochure}
+        href={abstract}
         download
         className="brochure-button"
       >
