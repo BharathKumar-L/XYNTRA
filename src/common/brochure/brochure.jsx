@@ -8,14 +8,14 @@ const Brochure = () => {
     <div className="file">
       <a
         href={abstract}
-        download
+        download="XYNTRA-BROCHURE.pdf"
         className="brochure-button"
       >
         Abstract <br /> Template
       </a>
       <a
         href={brochure}
-        download
+        download="ABSTRACT-TEMPLATE.docx"
         className="brochure-button"
       >
         Brochure
