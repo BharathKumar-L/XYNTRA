@@ -1,18 +1,20 @@
 import React from "react";
 import './brochure.css'
+import brochure from '../../assets/broch.pdf'
+import abstract from '../../assets/Abstract-Template.docx'
 
 const Brochure = () => {
   return (
     <div className="file">
       <a
-        href="../../assets/Abstract-Template.docx"
+        href={abstract}
         download="ABSTRACT-TEMPLATE.docx"
         className="brochure-button"
       >
         Abstract <br /> Template
       </a>
       <a
-        href="../../assets/broch.pdf"
+        href={brochure}
         download="XYNTRA-BROCHURE.pdf"
         className="brochure-button"
       >
