@@ -16,28 +16,28 @@ import ScrollToTop from "./ScrollToTop";
 
 function App() {
   
-  // useEffect(() => {
-  //   const disableRightClick = (e) => {
-  //     e.preventDefault();
-  //   };
-  //   const disableKeys = (e) => {
-  //     if (
-  //       (e.ctrlKey && (e.key === "u" || e.key === "U")) ||
-  //       (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) ||
-  //       e.key === "F12"
-  //     ) {
-  //       e.preventDefault();
-  //     }
-  //   };
+  useEffect(() => {
+    const disableRightClick = (e) => {
+      e.preventDefault();
+    };
+    const disableKeys = (e) => {
+      if (
+        (e.ctrlKey && (e.key === "u" || e.key === "U")) ||
+        (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "i")) ||
+        e.key === "F12"
+      ) {
+        e.preventDefault();
+      }
+    };
 
-  //   document.addEventListener("contextmenu", disableRightClick);
-  //   document.addEventListener("keydown", disableKeys);
+    document.addEventListener("contextmenu", disableRightClick);
+    document.addEventListener("keydown", disableKeys);
 
-  //   return () => {
-  //     document.removeEventListener("contextmenu", disableRightClick);
-  //     document.removeEventListener("keydown", disableKeys);
-  //   };
-  // }, []);
+    return () => {
+      document.removeEventListener("contextmenu", disableRightClick);
+      document.removeEventListener("keydown", disableKeys);
+    };
+  }, []);
 
   return (
     <Router>
