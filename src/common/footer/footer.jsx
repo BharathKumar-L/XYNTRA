@@ -66,7 +66,7 @@ const Footer = () => {
               </div>
             </a>
 
-            <a href="https://www.instagram.com/ieee_cs_rec" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/xyntra_25" target="_blank" rel="noopener noreferrer">
               <div className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="white">
                   <path d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248 4.623 4.623 0 0 0 0-9.248zm0 7.627a3.004 3.004 0 1 1 0-6.008 3.004 3.004 0 0 1 0 6.008z" />
