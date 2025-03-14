@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import "./reg_timer.css";
 
 const Regtimer = () => {
-  const targetDate = new Date("Mar 29, 2025 00:00:00").getTime();
+  const targetDate = new Date("Apr 12, 2025 08:00:00").getTime();
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   function calculateTimeLeft() {
