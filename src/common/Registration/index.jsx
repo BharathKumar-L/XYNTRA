@@ -15,7 +15,7 @@ const Register = () => {
           <ul>
             <li><strong>Team Formation</strong>
               <ul>
-                <li>Each team can have 4 to 6 members.</li>
+                <li>Each team can have 4 to 6 members(atleast one female participant).</li>
                 <li>Teams must register and submit their abstract before the deadline.</li>
                 <li>A team can submit only one idea.</li>
               </ul>
