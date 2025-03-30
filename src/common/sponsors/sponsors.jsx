@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sponsors.css';
+import './spon.css';
 import Poorvika from '../../assets/Poorvika.png';
 import Unstop from '../../assets/unstop.png';
 import Altruisty from '../../assets/Altruisty.png';
