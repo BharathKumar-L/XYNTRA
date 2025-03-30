@@ -5,6 +5,7 @@ import Regbutton from '../../common/button/reg-button';
 import Prize from '../../common/prize/prize';
 import Domains from '../../common/domain';
 import Aboutus from '../../common/aboutus/aboutus';
+import Sponsors from '../../common/sponsors/sponsors';
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             <Aboutus/>
             <Domains/>
             <Prize />
+            <Sponsors/>
             <FAQ />
         </div>
     );
