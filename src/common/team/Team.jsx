@@ -277,21 +277,18 @@ const faculty_coordinators = [
     id: 34,
     name : "Dr.S.VinodhKumar",
     role: "FACULTY COORDINATOR",
-    image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "#",
   },
   {
     id: 35,
     name: "Dr.N.DuraiMurugan",
     role: "FACULTY COORDINATOR",
-    image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
-    linkedIn: "#",
+    linkedIn: "https://www.linkedin.com/in/duraimurugan-n-181145ba/",
   },
   {
     id: 36,
     name: "Dr.K.Anantajothi",
     role: "FACULTY COORDINATOR",
-    image : "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png",
     linkedIn: "#",
   }
 ];
@@ -303,11 +300,10 @@ const Team = () => {
       <h1>CONVENOR</h1>
       <div className="team">
           <div className="card2">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" alt="convenor" className="profile-pic" />
             <div className="card-content">
               <h2>Dr.P.Kumar</h2>
               <h3>Convenor</h3>
-              <a href="#" target="_blank" rel="noreferrer">
+              <a href="https://www.linkedin.com/in/dr-p-kumar-1129aa194/" target="_blank" rel="noreferrer">
                 Connect on LinkedIn
                 <img
                   width={30}
@@ -324,7 +320,6 @@ const Team = () => {
       <div className="team">
         {faculty_coordinators.map((member) => (
           <div key={member.id} className="card2">
-            <img src={member.image} alt={member.name} className="profile-pic" />
             <div className="card-content">
               <h2>{member.name}</h2>
               <h3>{member.role}</h3>
