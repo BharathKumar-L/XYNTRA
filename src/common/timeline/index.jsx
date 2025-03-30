@@ -10,7 +10,7 @@ const Timeline = () => {
   const [pathLength, setPathLength] = useState(0);
   const [pacmanProgress, setPacmanProgress] = useState(0);
   const [pacmanRotation, setPacmanRotation] = useState(0);
-  const [stopAtPoint, setStopAtPoint] = useState(1);
+  const [stopAtPoint, setStopAtPoint] = useState(2);
   const [isAnimating, setIsAnimating] = useState(true);
   const [isJumping, setIsJumping] = useState(false);
   const [jumpOffset, setJumpOffset] = useState(0);
