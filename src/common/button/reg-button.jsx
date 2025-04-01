@@ -10,7 +10,7 @@ const Regbutton = () => {
   };
   return (
     <div className='register-button-container'>
-      <button onClick={regnav}  className='register-button'>REGISTER NOW!</button>
+      <button onClick={regnav}  className='register-button'>REGISTRATIONS CLOSED!</button>
     </div> 
   );
 };
