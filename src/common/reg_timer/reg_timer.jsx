@@ -56,7 +56,7 @@ const Regtimer = () => {
           </div>
         </div>
       ) : (
-        <p className="expired-text">REGISTRATIONS CLOSED</p>
+        <p className="expired-text">HACKATHON ENDED</p>
       )}
     </div>
   );
