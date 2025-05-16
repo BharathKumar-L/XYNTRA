@@ -1,14 +1,22 @@
 # XYNTRA Hackathon
 
-A modern web application for the XYNTRA Hackathon event, featuring a dynamic countdown timer and registration system.
+A modern web application for the XYNTRA Hackathon event, featuring a dynamic countdown timer, registration system, and comprehensive event information.
 
 ## Features
 
 - Real-time countdown timer to hackathon start/end
-- Responsive design
-- Modern UI/UX
-- Registration system
-- Dynamic content updates
+- Registration system with form validation
+- Interactive timeline of events
+- Prize pool information and domain details
+- FAQ section
+- Team information
+- Sponsor showcase
+- Contact form
+- Live updates section
+- Responsive navigation
+- Dynamic brochure viewer
+- Background animations and effects
+- Scroll-to-top functionality
 
 ## Tech Stack
 
@@ -16,6 +24,7 @@ A modern web application for the XYNTRA Hackathon event, featuring a dynamic cou
 - Vite
 - CSS3
 - Modern JavaScript (ES6+)
+- Evervault Card Integration
 
 ## Getting Started
 
@@ -50,10 +59,54 @@ The application will be available at [http://localhost:5173](http://localhost:51
 src/
 ├── assets/         # Static assets like images
 ├── common/         # Reusable components
-│   └── reg_timer/  # Registration timer component
-├── components/     # Main components
-└── ...
+│   ├── aboutus/    # About section component
+│   ├── bg/         # Background effects
+│   ├── brochure/   # Brochure viewer
+│   ├── button/     # Custom button components
+│   ├── contact/    # Contact form
+│   ├── domain/     # Domain information
+│   ├── evervault-card/ # Card animations
+│   ├── faq/        # FAQ section
+│   ├── footer/     # Footer component
+│   ├── hero/       # Hero section
+│   ├── live/       # Live updates
+│   ├── nav/        # Navigation components
+│   ├── navbar/     # Main navigation bar
+│   ├── prize/      # Prize information
+│   ├── prize_card/ # Prize card components
+│   ├── reg_timer/  # Registration timer
+│   ├── Registration/ # Registration form
+│   ├── sponsors/   # Sponsor showcase
+│   ├── team/       # Team information
+│   └── timeline/   # Event timeline
+├── pages/          # Main page components
+│   ├── home/       # Home page
+│   └── timeline/   # Timeline page
+├── App.jsx         # Main application component
+├── main.jsx        # Application entry point
+├── ScrollToTop.jsx # Scroll functionality
+└── recmap.jsx      # Map component
 ```
+
+## Component Details
+
+### Core Components
+- **Registration Timer**: Real-time countdown to hackathon start/end
+- **Navigation**: Responsive navigation with mobile support
+- **Hero Section**: Main landing section with event highlights
+- **Timeline**: Interactive event schedule
+- **Registration Form**: Participant registration with validation
+- **FAQ Section**: Frequently asked questions
+- **Sponsor Showcase**: Display of event sponsors
+- **Team Section**: Information about organizing team
+- **Contact Form**: User inquiry submission
+- **Footer**: Site-wide footer with links and information
+
+### Utility Components
+- **ScrollToTop**: Smooth scrolling to top functionality
+- **Background Effects**: Dynamic background animations
+- **Evervault Card**: Interactive card components
+- **Brochure Viewer**: PDF brochure display
 
 ## Available Scripts
 
