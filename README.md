@@ -1,59 +1,82 @@
-# Getting Started with Vite React App
+# XYNTRA Hackathon
 
-This project was bootstrapped with [Vite](https://vitejs.dev/).
+A modern web application for the XYNTRA Hackathon event, featuring a dynamic countdown timer and registration system.
+
+## Features
+
+- Real-time countdown timer to hackathon start/end
+- Responsive design
+- Modern UI/UX
+- Registration system
+- Dynamic content updates
+
+## Tech Stack
+
+- React.js
+- Vite
+- CSS3
+- Modern JavaScript (ES6+)
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14.0.0 or higher)
+- npm (v6.0.0 or higher)
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone [repository-url]
+cd XYNTRA
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at [http://localhost:5173](http://localhost:5173)
+
+## Project Structure
+
+```
+src/
+├── assets/         # Static assets like images
+├── common/         # Reusable components
+│   └── reg_timer/  # Registration timer component
+├── components/     # Main components
+└── ...
+```
 
 ## Available Scripts
 
-In the project directory, you can run:
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
 
-### `npm run dev`
+## Contributing
 
-Runs the app in development mode.  
-Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-The page will reload when you make changes.  
-You may also see lint errors in the console.
+## License
 
-### `npm run build`
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Builds the app for production to the `dist` folder.  
-Vite optimizes the build for best performance and faster load times.
+## Contact
 
-The build is minified, and the filenames include the hashes.  
-Your app is ready to be deployed!
-
-### `npm run preview`
-
-Locally previews a production build from the `dist` folder.  
-Useful for testing the production build before deployment.
-
-## Learn More
-
-You can learn more about Vite in the [Vite documentation](https://vitejs.dev/guide/).  
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Why Vite?
-
-Vite is a modern frontend tool that provides a faster and leaner development experience. It uses native ES modules during development and bundles your code using Rollup for production. Key benefits include:
-
-- Lightning-fast cold starts and hot module replacement (HMR).
-- Optimized builds with tree-shaking and code-splitting.
-- Modern development environment with minimal configuration.
-
-## Deployment
-
-Follow Vite's official guide for deployment: [Vite Deployment Guide](https://vitejs.dev/guide/static-deploy.html).
-
-### Common Issues
-
-#### `npm run build` fails
-
-Check Vite's troubleshooting guide: [Vite Troubleshooting](https://vitejs.dev/guide/troubleshooting.html).
-
-#### Hot Module Replacement (HMR) not working
-
-Ensure your Vite config and development server settings are properly configured.
+For any queries or support, please reach out to the development team.
 
 ---
 
-Enjoy developing with Vite and React!
+Built with ❤️ for XYNTRA Hackathon
